@@ -37,8 +37,11 @@ def card(c):
         url = f"[{c['set']}]({c['set_url']})" if c.get("set_url") else c["set"]
         lines.append(f"| Набор | {url} |")
     if c.get("htr"):
+        here = (ROOT / "text" / f"{c['id']}.md").exists()
+        where = f"[текст](../text/{c['id']}.md), " if here else ""
         lines.append(
-            f"| Машинное чтение | {c['htr']} знака на строку, модель «{c['htr_model']}» |"
+            f"| Машинное чтение | {where}{c['htr']} знака на строку, "
+            f"модель «{c['htr_model']}» |"
         )
     lines.append("")
     if c.get("note"):
@@ -51,7 +54,7 @@ def card(c):
             "чтобы найти страницу по корню слова; не годится, чтобы цитировать."
         )
         lines.append("")
-    lines.append("[← назад в каталог](../CATALOG.md)")
+    lines.append("[← назад в каталог](../CATALOG.md) · [о правах](../rights.md)")
     return "\n".join(lines) + "\n"
 
 
@@ -62,17 +65,24 @@ def catalog():
     out = ["# Каталог дел", "",
            "Что уже набрано людьми, что читается только машиной, а что лежит одними образами.",
            "",
-           "| Шифр | Годы | Состояние | Набор | Заголовок |",
+           "| Шифр | Годы | Состояние | Текст | Заголовок |",
            "|---|---|---|---|---|"]
     for c in rows:
-        s = f"[{c['set']}]({c['set_url']})" if c.get("set") and c.get("set_url") else (c.get("set") or "—")
+        if c.get("set") and c.get("set_url"):
+            s = f"[{c['set']}]({c['set_url']})"
+        elif (ROOT / "text" / f"{c['id']}.md").exists():
+            s = f"[читать](text/{c['id']}.md)"
+        else:
+            s = c.get("set") or "—"
         t = c["title"]
         t = t[:70] + "…" if len(t) > 71 else t
         out.append(
             f"| [{c['arch']} {cipher(c)}](cases/{c['id']}.md) | {c['years'] or '—'} "
             f"| {STATE_MARK.get(c['state'], c['state'])} | {s} | {t} |"
         )
-    out += ["", "Ресурсы, откуда всё это берётся, — в [sources.md](sources.md)."]
+    out += ["",
+            "Ресурсы, откуда всё это берётся, — в [sources.md](sources.md); "
+            "что здесь можно публиковать и почему — в [rights.md](rights.md)."]
     return "\n".join(out) + "\n"
 
 

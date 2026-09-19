@@ -9,4 +9,4 @@
 | Образы | нет в сети |
 | Набор | [census1710.narod.ru](https://census1710.narod.ru/perepis/10_3_7.htm) |
 
-[← назад в каталог](../CATALOG.md)
+[← назад в каталог](../CATALOG.md) · [о правах](../rights.md)
