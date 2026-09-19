@@ -1,0 +1,20 @@
+title: "Переписи Урала и Русского Севера"
+description: "Что уже набрано, а что придётся читать самому"
+theme: jekyll-theme-primer
+lang: ru
+
+plugins:
+  - jekyll-relative-links
+
+# Без этого ссылки вида cases/xxx.md на сайте ведут в никуда:
+# плагин переписывает их в адреса готовых страниц.
+relative_links:
+  enabled: true
+  collections: true
+
+# Служебное наружу не отдаём.
+exclude:
+  - tools/
+  - .gitignore
+  - Gemfile
+  - Gemfile.lock
