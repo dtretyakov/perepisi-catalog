@@ -96,12 +96,14 @@ def velikie(c):
     return f"[Великие описи](https://inv.velikie.org/archive/{slug}/{c['f']}/)"
 
 
+# В таблице состояние — одно слово: столбец служит для беглого просмотра, а не
+# для чтения. Всё, что к нему прилагается, живёт в карточке дела.
 STATE_MARK = {
     "набрана": "🟢 набрана",
-    "частично набрана": "🟡 набрана частично",
-    "только машинное чтение": "🔵 машинное чтение",
-    "только образы": "⚪ только образы",
-    "только опись": "⚫ только опись",
+    "частично набрана": "🟡 частично",
+    "только машинное чтение": "🔵 распознана",
+    "только образы": "⚪ образы",
+    "только опись": "⚫ опись",
 }
 
 
@@ -134,6 +136,30 @@ def volume(c):
     return " · ".join(bits)
 
 
+def verdict(c):
+    """Полная мера для карточки: обе величины и чем задан цвет.
+
+    В таблице стоит один квадрат, и на табличном деле он выглядит загадкой:
+    зелёный при десяти знаках на строку. Карточка обязана сказать, по какой
+    величине выставлен цвет и почему вторая здесь не в счёт.
+    """
+    g = grade(c)
+    if not g:
+        return None
+    mark = g[0]
+    dens = f"{c['htr'].replace('.', ',')} знака на строку" if c.get("htr") else None
+    conf = c["htr_conf"].replace(".", ",") if c.get("htr_conf") else None
+    if c.get("tabular"):
+        return (f"{mark} уверенность {conf}. Плотность {dens} — величина здесь "
+                "обманчивая: дело табличное, имя, отчество и возраст стоят в "
+                "разных клетках, и даже безупречное чтение даёт около десяти "
+                "знаков. Цвет выставлен по уверенности")
+    if conf:
+        return (f"{mark} {dens}, уверенность {conf}. Цвет — по худшей из двух "
+                "величин")
+    return f"{mark} {dens}"
+
+
 def card(c):
     lines = [f"# {c['arch']} {cipher(c)}", ""]
     lines.append(f"**{c['title']}**")
@@ -151,10 +177,16 @@ def card(c):
     bits = []
     if c.get("opis"):
         bits.append(c["opis"])
+    # Адрес описи получается из адреса дела отбрасыванием последнего сегмента —
+    # это точно по построению, и никаких таблиц томов не нужно: опись, в которой
+    # дело лежит, по определению та, через которую к нему пришли.
     uiad = OPIS_UIAD.get((c["arch"], c["f"], c["o"]))
     fond = FOND_UIAD.get((c["arch"], c["f"]))
     number = int(c["d"]) if c["d"].isdigit() else None
-    if uiad and uiad[1](number):
+    if c.get("case_url"):
+        parent = c["case_url"].rstrip("/").rsplit("/", 1)[0] + "/"
+        bits.append(f"[ф.{c['f']} оп.{c['o']} в ГИС УИАД]({parent})")
+    elif uiad and uiad[1](number):
         bits.append(f"[ф.{c['f']} оп.{c['o']} в ГИС УИАД]({uiad[0]})")
     elif fond:
         bits.append(f"[ф.{c['f']} в ГИС УИАД]({fond})")
@@ -178,9 +210,11 @@ def card(c):
         here = (ROOT / "text" / f"{c['id']}.md").exists()
         where = f"[текст](../text/{c['id']}.md), " if here else ""
         lines.append(
-            f"| Машинное чтение | {where}{c['htr']} знака на строку, "
-            f"модель «{c['htr_model']}» |"
+            f"| Машинное чтение | {where}модель «{c['htr_model']}» |"
         )
+        v = verdict(c)
+        if v:
+            lines.append(f"| Чего стоит чтение | {v} |")
     lines.append("")
     if c.get("note"):
         lines.append(c["note"])
@@ -198,10 +232,10 @@ def card(c):
 
 
 def state_cell(c):
-    """Состояние, а для машинного чтения — ещё и чего оно стоит."""
+    """Состояние одним словом; у распознанных — ещё знак качества, без чисел."""
     cell = STATE_MARK.get(c["state"], c["state"])
     g = grade(c)
-    return f"{cell} · {g}" if g else cell
+    return f"{cell} {g[0]}" if g else cell
 
 
 def catalog():
