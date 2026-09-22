@@ -21,12 +21,49 @@ OPIS_UIAD = {
     ("РГАДА", "350", "2"): "https://online.archives.ru/guide/10000000001014/10000000297014/10000003363014/",
 }
 
-# Куда вести, когда постоянного адреса описи у нас нет.
+# Куда вести, когда постоянный адрес описи ещё не выписан. Для РГАДА это не
+# сторонний сайт с поисковой формой, а тот же каталог ГИС УИАД уровнем выше:
+# читатель попадает в список фондов архива и спускается к своей описи сам.
+ARCHIVE_UIAD = {"РГАДА": "https://online.archives.ru/guide/10000000001014/"}
+
 OPIS_FALLBACK = {
-    "РГАДА": ("поиск РГАДА", "http://rgada.info/poisk/"),
+    "РГАДА": ("каталог РГАДА в ГИС УИАД", ARCHIVE_UIAD["РГАДА"]),
     "ГАПК": ("archives.permkrai.ru", "https://archives.permkrai.ru/archive/search?in=units"),
     "ГАСО": ("metriki.gaso-ural.ru", "https://metriki.gaso-ural.ru/"),
 }
+
+
+# Насколько можно доверять машинному чтению — одним знаком.
+#
+# Мера зависит от того, как устроено дело. В сплошном тексте работает плотность:
+# на своей руке модель даёт двадцать четыре знака на строку и выше, ниже
+# восемнадцати начинается шум. В табличном деле плотность бессмысленна — имя,
+# отчество и возраст стоят в разных клетках, и даже безупречное чтение даёт
+# восемь знаков на строку, — там мерой служит средняя уверенность.
+#
+# Когда известны обе величины, берётся худшая: д.1508 читается на тридцати трёх
+# знаках, но с уверенностью 0,88, и зелёным её называть нельзя.
+def grade(c):
+    marks = []
+    if c.get("htr") and not c.get("tabular"):
+        d = float(c["htr"])
+        marks.append(2 if d >= 24 else 1 if d >= 18 else 0)
+    if c.get("htr_conf"):
+        q = float(c["htr_conf"])
+        marks.append(2 if q >= 0.95 else 1 if q >= 0.90 else 0)
+    if not marks:
+        return None
+    mark = ["🟥", "🟨", "🟩"][min(marks)]
+    conf = c["htr_conf"].replace(".", ",") if c.get("htr_conf") else None
+    if c.get("tabular"):
+        return f"{mark} уверенность {conf}"
+    dens = f"{c['htr'].replace('.', ',')} зн/стр"
+    # Когда цвет задан уверенностью, а не плотностью, одна плотность в ячейке
+    # выглядит противоречием: тридцать три знака на строку и красный квадрат.
+    # Тогда печатаются обе величины, и видно, которая тянет вниз.
+    if conf and len(marks) == 2 and marks[1] < marks[0]:
+        return f"{mark} {dens}, уверенность {conf}"
+    return f"{mark} {dens}"
 
 # Описи, набранные волонтёрами: читаются без входа и без оплаты. Страница есть
 # на каждый фонд (`/archive/<архив>/<фонд>/`), а на опись — нет: адрес с номером
@@ -139,6 +176,13 @@ def card(c):
     return "\n".join(lines) + "\n"
 
 
+def state_cell(c):
+    """Состояние, а для машинного чтения — ещё и чего оно стоит."""
+    cell = STATE_MARK.get(c["state"], c["state"])
+    g = grade(c)
+    return f"{cell} · {g}" if g else cell
+
+
 def catalog():
     order = ["набрана", "частично набрана", "только машинное чтение", "только образы", "только опись"]
     rows = sorted(CASES, key=lambda c: (order.index(c["state"]) if c["state"] in order else 9,
@@ -153,7 +197,7 @@ def catalog():
         t = t[:70] + "…" if len(t) > 71 else t
         out.append(
             f"| [{c['arch']} {cipher(c)}](cases/{c['id']}.md) | {c['years'] or '—'} "
-            f"| {STATE_MARK.get(c['state'], c['state'])} | {t} |"
+            f"| {state_cell(c)} | {t} |"
         )
     out += ["",
             "Ресурсы, откуда всё это берётся, — в [sources.md](sources.md); "
