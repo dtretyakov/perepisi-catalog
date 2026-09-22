@@ -109,3 +109,10 @@ python3 tools/build.py
 ```bash
 python3 tools/text.py
 ```
+
+## Лицензия и ссылка на справочник
+
+Тексты и машинные чтения — [CC BY 4.0](LICENSE), скрипты — [MIT](tools/LICENSE).
+Как сослаться — в [CITATION.cff](CITATION.cff). Подробный разбор, что здесь чьё
+и почему это законно, — в [rights.md](rights.md).
+
