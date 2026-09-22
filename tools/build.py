@@ -53,8 +53,14 @@ FOND_UIAD = {
     ("РГАДА", "1642"): _G + "10000001482014/",
 }
 
+# У ГАПК в адресе стоит номер архивного учреждения: `/archive1/`, а не `/archive/`.
+# Само дело — `/archive1/unit/<unit>`, опись — `/archive1/inventory/73643`
+# (ф.111 оп.1), фонд — `/archive1/funds/73621`. Поиск живёт по параметру `search`,
+# а не `q`: с `q` страница отвечает 200 и печатает «Ничего не найдено».
+GAPK = "https://archives.permkrai.ru/archive1/"
+
 OPIS_FALLBACK = {
-    "ГАПК": ("archives.permkrai.ru", "https://archives.permkrai.ru/archive/search?in=units"),
+    "ГАПК": ("ф.111 оп.1 в каталоге ГАПК", GAPK + "inventory/73643"),
     "ГАСО": ("metriki.gaso-ural.ru", "https://metriki.gaso-ural.ru/"),
 }
 
@@ -194,18 +200,21 @@ def card(c):
     vol = volume(c)
     if vol:
         lines.append(f"| Объём | {vol} |")
+    where = "ГИС УИАД" if "online.archives.ru" in (c.get("case_url") or "") else "каталог архива"
     if c.get("case_url"):
-        lines.append(f"| Дело в каталоге | [ГИС УИАД]({c['case_url']}) |")
+        lines.append(f"| Дело в каталоге | [{where}]({c['case_url']}) |")
     bits = []
     if c.get("opis"):
         bits.append(c["opis"])
-    # Адрес описи получается из адреса дела отбрасыванием последнего сегмента —
-    # это точно по построению, и никаких таблиц томов не нужно: опись, в которой
-    # дело лежит, по определению та, через которую к нему пришли.
+    # В ГИС УИАД адрес описи получается из адреса дела отбрасыванием последнего
+    # сегмента: каталог там иерархический, и опись, через которую к делу пришли,
+    # по определению та, в которой оно лежит. У ГАПК адрес плоский —
+    # `/archive1/unit/<id>` ничего не говорит об описи, — и её адрес берётся из
+    # таблицы, а не выводится.
     uiad = OPIS_UIAD.get((c["arch"], c["f"], c["o"]))
     fond = FOND_UIAD.get((c["arch"], c["f"]))
     number = int(c["d"]) if c["d"].isdigit() else None
-    if c.get("case_url"):
+    if c.get("case_url") and "online.archives.ru" in c["case_url"]:
         parent = c["case_url"].rstrip("/").rsplit("/", 1)[0] + "/"
         bits.append(f"[ф.{c['f']} оп.{c['o']} в ГИС УИАД]({parent})")
     elif uiad and uiad[1](number):
@@ -220,11 +229,8 @@ def card(c):
     if v:
         bits.append(v)
     lines.append(f"| Опись | {' · '.join(bits)} |")
-    if c.get("unit"):
-        lines.append(
-            f"| Дело в просмотрщике | [unit {c['unit']}]"
-            f"(https://archives.permkrai.ru/archive/search?in=units&q={c['d']}) |"
-        )
+    if c.get("unit") and not c.get("case_url"):
+        lines.append(f"| Дело в просмотрщике | [unit {c['unit']}]({GAPK}unit/{c['unit']}) |")
     if c.get("set"):
         url = f"[{c['set']}]({c['set_url']})" if c.get("set_url") else c["set"]
         lines.append(f"| Набор | {url} |")
