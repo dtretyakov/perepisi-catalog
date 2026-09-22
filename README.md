@@ -112,7 +112,7 @@ python3 tools/text.py
 
 ## Лицензия и ссылка на справочник
 
-Тексты и машинные чтения — [CC BY 4.0](LICENSE), скрипты — [MIT](tools/LICENSE).
+Тексты и машинные чтения — [CC BY 4.0](LICENSE), скрипты — [MIT](LICENSE-MIT).
 Как сослаться — в [CITATION.cff](CITATION.cff). Подробный разбор, что здесь чьё
 и почему это законно, — в [rights.md](rights.md).
 
