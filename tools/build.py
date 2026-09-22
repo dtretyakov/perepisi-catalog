@@ -121,9 +121,15 @@ def grade(c):
 VELIKIE_SLUG = {"РГАДА": "rgada", "ГАСО": "gaso-ural"}
 
 
+# У волонтёров набраны не все фонды: страницы ф.281 и ф.1642 отдают 404, и
+# ссылка на них — обещание, которого никто не давал. Перечислены те, что
+# проверены и отвечают.
+VELIKIE_FONDS = {"РГАДА": {"214", "350", "1111", "1209", "1455"}}
+
+
 def velikie(c):
     slug = VELIKIE_SLUG.get(c["arch"])
-    if not slug:
+    if not slug or c["f"] not in VELIKIE_FONDS.get(c["arch"], set()):
         return None
     return f"[Великие описи](https://inv.velikie.org/archive/{slug}/{c['f']}/)"
 
@@ -214,7 +220,12 @@ def card(c):
     uiad = OPIS_UIAD.get((c["arch"], c["f"], c["o"]))
     fond = FOND_UIAD.get((c["arch"], c["f"]))
     number = int(c["d"]) if c["d"].isdigit() else None
-    if c.get("case_url") and "online.archives.ru" in c["case_url"]:
+    if c.get("opis_url"):
+        # Запись не об одном деле, а о группе: у ф.1455 это два десятка актов,
+        # у ф.1642 — коллекция приказных изб. Отдельного адреса у такой записи
+        # быть не может, и опись здесь — самый точный уровень, какой существует.
+        bits.append(f"[ф.{c['f']} оп.{c['o']} в ГИС УИАД]({c['opis_url']})")
+    elif c.get("case_url") and "online.archives.ru" in c["case_url"]:
         parent = c["case_url"].rstrip("/").rsplit("/", 1)[0] + "/"
         bits.append(f"[ф.{c['f']} оп.{c['o']} в ГИС УИАД]({parent})")
     elif uiad and uiad[1](number):
@@ -228,7 +239,8 @@ def card(c):
     v = velikie(c)
     if v:
         bits.append(v)
-    lines.append(f"| Опись | {' · '.join(bits)} |")
+    if bits:
+        lines.append(f"| Опись | {' · '.join(bits)} |")
     if c.get("unit") and not c.get("case_url"):
         lines.append(f"| Дело в просмотрщике | [unit {c['unit']}]({GAPK}unit/{c['unit']}) |")
     if c.get("set"):
