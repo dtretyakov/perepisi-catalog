@@ -11,6 +11,20 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 CASES = json.loads((ROOT / "tools" / "cases.json").read_text(encoding="utf-8"))
 
+# Куда вести читателя за описью. Ссылка идёт на входную страницу поиска, а не на
+# конкретный PDF: у РГАДА `opisi/` — пустая заглушка, а `poisk/` — живое меню, где
+# опись выбирается по фонду. Глубокие адреса просмотрщика здесь не место: они
+# привязаны к сессии и годятся не для ссылки, а для выкачивания.
+OPIS_URL = {
+    "РГАДА": ("rgada.info/poisk", "http://rgada.info/poisk/"),
+    "ГАПК": ("archives.permkrai.ru", "https://archives.permkrai.ru/archive/search?in=units"),
+    "ГАСО": ("metriki.gaso-ural.ru", "https://metriki.gaso-ural.ru/"),
+}
+
+# Описи, набранные волонтёрами: читаются без входа и без оплаты.
+VELIKIE = ("Великие описи", "https://inv.velikie.org/")
+
+
 STATE_MARK = {
     "набрана": "🟢 набрана",
     "частично набрана": "🟡 набрана частично",
@@ -33,6 +47,20 @@ def card(c):
     lines.append(f"| Годы | {c['years'] or '—'} |")
     lines.append(f"| Состояние | {STATE_MARK.get(c['state'], c['state'])} |")
     lines.append(f"| Образы | {c['scans'] or '—'} |")
+    op = OPIS_URL.get(c["arch"])
+    if op or c.get("opis"):
+        bits = []
+        if c.get("opis"):
+            bits.append(c["opis"])
+        if op:
+            bits.append(f"[{op[0]}]({op[1]})")
+        bits.append(f"[{VELIKIE[0]}]({VELIKIE[1]})")
+        lines.append(f"| Опись | {' · '.join(bits)} |")
+    if c.get("unit"):
+        lines.append(
+            f"| Дело в просмотрщике | [unit {c['unit']}]"
+            f"(https://archives.permkrai.ru/archive/search?in=units&q={c['d']}) |"
+        )
     if c.get("set"):
         url = f"[{c['set']}]({c['set_url']})" if c.get("set_url") else c["set"]
         lines.append(f"| Набор | {url} |")
