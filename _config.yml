@@ -18,3 +18,9 @@ exclude:
   - .gitignore
   - Gemfile
   - Gemfile.lock
+
+# Скрипты наружу не отдаём, но лицензия на них — отдаём: на неё ссылается README,
+# и без этой строки ссылка на сайте ведёт в 404, хотя на GitHub работает.
+include:
+  - tools/LICENSE
+
