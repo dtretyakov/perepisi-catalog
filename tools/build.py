@@ -8,6 +8,8 @@ import json
 import os
 from pathlib import Path
 
+from models import model_link
+
 ROOT = Path(__file__).resolve().parent.parent
 CASES = json.loads((ROOT / "tools" / "cases.json").read_text(encoding="utf-8"))
 
@@ -264,7 +266,7 @@ def card(c):
         here = (ROOT / "text" / f"{c['id']}.md").exists()
         where = f"[текст](../text/{c['id']}.md), " if here else ""
         lines.append(
-            f"| Машинное чтение | {where}модель «{c['htr_model']}» |"
+            f"| Машинное чтение | {where}модель {model_link(c['htr_model'])} |"
         )
         v = verdict(c)
         if v:

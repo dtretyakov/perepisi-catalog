@@ -10,6 +10,8 @@ import os
 import re
 from pathlib import Path
 
+from models import model_link
+
 ROOT = Path(__file__).resolve().parent.parent
 CORPUS = Path(os.environ.get("GENEA_CORPUS", Path.home() / ".genea" / "corpus"))
 CASES = json.loads((ROOT / "tools" / "cases.json").read_text(encoding="utf-8"))
@@ -70,7 +72,7 @@ def render(c, prts):
         f"**{c['title']}**",
         "",
         f"Годы: {c['years'] or '—'}. Листов прочитано: {len(ps)}, строк: {n}. "
-        f"Модель «{c['htr_model']}», {c['htr']} знака на строку"
+        f"Модель {model_link(c['htr_model'])}, {c['htr']} знака на строку"
         + (f", средняя уверенность {c['htr_conf']}." if c.get("htr_conf") else "."),
         "",]
     # Оговорка про таблицу — свойство ДЕЛА, а не того, что у нас посчитана
