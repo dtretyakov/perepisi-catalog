@@ -9,6 +9,7 @@ import os
 from pathlib import Path
 
 import geo
+import search_index
 from models import model_link, model_url
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -542,7 +543,7 @@ def region_page(slug):
             out += ["Фонды и коллекции: " + "; ".join(
                 f"[{c['arch']} {cipher(c)}](../cases/{c['id']}.md) — {c['title']} ({c['years']})" for c in coll), ""]
     out += ["[Все области](../README.md#gde-iskat) · [указатель мест](../places.md) · "
-            "[указатель по шифрам](../CATALOG.md)"]
+            "[указатель по шифрам](../CATALOG.md) · [поиск по машинным чтениям](../search.html)"]
     return "\n".join(out) + "\n"
 
 
@@ -564,7 +565,7 @@ def places_page():
            "двойное имя через «тож». Искать стоит и по соседним написаниям.", "",
            "Указатель не полон: в него внесено то, что названо в описи, на карточке дела или "
            "найдено при чтении. Места, которых здесь нет, могут стоять в деле — сплошной "
-           "поиск по именам и селениям идёт по наборам и машинным чтениям.", "",
+           "поиск по именам и селениям идёт по наборам и [машинным чтениям](search.html).", "",
            "| Место | Уезд | Годы | Дело | Листы |", "|---|---|---|---|---|"]
     for key in sorted(groups):
         p, u, hits = groups[key]
@@ -689,8 +690,9 @@ def main():
     (ROOT / "cases").mkdir(exist_ok=True)
     (ROOT / "regions").mkdir(exist_ok=True)
     (ROOT / "data").mkdir(exist_ok=True)
+    pub = [public(c) for c in CASES]
     (ROOT / "data" / "cases.json").write_text(json.dumps(
-        {"schema_version": 1, "cases": [public(c) for c in CASES]}, ensure_ascii=False, indent=1) + "\n",
+        {"schema_version": 1, "cases": pub}, ensure_ascii=False, indent=1) + "\n",
         encoding="utf-8")
     warn = [w for w in (check(c) for c in CASES) if w]
     for c in CASES:
@@ -704,6 +706,8 @@ def main():
         (ROOT / "regions" / f"{r}.md").write_text(region_page(r), encoding="utf-8")
     (ROOT / "places.md").write_text(places_page(), encoding="utf-8")
     readme()
+    n, shards, words, postings, size = search_index.build(pub)
+    print(f"поиск: дел {n}, словоформ {words}, {size / 1e6:.1f} МБ в {shards} файлах")
     print(f"карточек {len(CASES)}, областей {len(slugs)}, каталог собран")
     for w in warn:
         print("  ПРОВЕРЬТЕ:", w)

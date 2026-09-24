@@ -1,0 +1,180 @@
+---
+layout: default
+title: Поиск по машинным чтениям
+---
+<style>
+  .srch form { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 16px 0; }
+  .srch input[type=search] { flex: 1 1 260px; font-size: 18px; padding: 6px 10px; border: 1px solid #c8c3b8; border-radius: 6px; }
+  .srch select, .srch button { font-size: 15px; padding: 6px 10px; border-radius: 6px; border: 1px solid #c8c3b8; background: #fff; }
+  .srch button { background: #241f1a; color: #fff; border-color: #241f1a; cursor: pointer; }
+  .srch .forms { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 16px; }
+  .srch .forms label { border: 1px solid #c8c3b8; border-radius: 14px; padding: 2px 10px; font-size: 14px; cursor: pointer; user-select: none; }
+  .srch .forms input { margin-right: 4px; }
+  .srch .case { border-top: 1px solid #e3dfd6; padding: 12px 0; }
+  .srch .case h3 { margin: 0 0 4px; font-size: 16px; }
+  .srch .meta { color: #6a6358; font-size: 14px; }
+  .srch .pages { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; }
+  .srch .pages button { background: #f4f2ec; color: #241f1a; border: 1px solid #d9d4c8; font-size: 13px; padding: 2px 8px; }
+  .srch .pages button.on { background: #241f1a; color: #fff; }
+  .srch pre.lines { white-space: pre-wrap; background: #f8f7f3; border: 1px solid #e3dfd6; padding: 8px 10px; font-size: 14px; margin-top: 8px; }
+  .srch mark { background: #f2d58a; }
+  .srch .note { font-size: 14px; color: #6a6358; }
+  .srch .status { margin: 8px 0; }
+</style>
+
+<div class="srch">
+<p><a href="./">← к справочнику</a></p>
+
+<h1>Поиск по машинным чтениям</h1>
+
+<p class="note">Ищет в распознанных машиной делах: не в наборах, а в том, что прочитала модель.
+Модель путает прежде всего гласные, поэтому <b>гласные здесь считаются равными</b>: «Тренка» найдёт
+«Тронка», «Булаев» — «Болаев». Ищите по корню фамилии или имени, от трёх букв; несколько слов через
+пробел ищутся на одной странице. Сразу отмечены близкие написания, дальние показаны
+и включаются щелчком. Найденное проверяйте по образу: чтение годится для поиска страницы,
+но не для цитирования.</p>
+
+<form id="f">
+  <input type="search" id="q" placeholder="например: булаев" autocomplete="off" aria-label="Что искать">
+  <select id="reg" aria-label="Область"><option value="">все области</option></select>
+  <select id="uez" aria-label="Уезд"><option value="">все уезды</option></select>
+  <button type="submit">Найти</button>
+</form>
+
+<div id="status" class="status note"></div>
+<div id="forms" class="forms"></div>
+<div id="out"></div>
+</div>
+
+<script>
+// fold и skeleton повторяют tools/search_index.py знак в знак.
+const VOWELS = new Set('аеиоуыэюяй');
+function fold(w) {
+  w = w.toLowerCase();
+  for (const [a, b] of [['ё','е'],['ѣ','е'],['і','и'],['ї','и'],['ѳ','ф'],['ѵ','и']]) w = w.split(a).join(b);
+  return w.replace(/[ъь]/g, '');
+}
+function skeleton(w) {
+  const out = [];
+  for (const ch of fold(w)) {
+    const k = VOWELS.has(ch) ? '*' : ch;
+    if (out.length && out[out.length - 1] === k) continue;
+    out.push(k);
+  }
+  return out.join('');
+}
+const shardName = sk => [...sk.slice(0, 2)].map(c => c.codePointAt(0).toString(16)).join('_');
+function lev(a, b) {
+  const m = a.length, n = b.length, d = Array.from({length: m + 1}, (_, i) => [i, ...Array(n).fill(0)]);
+  for (let j = 1; j <= n; j++) d[0][j] = j;
+  for (let i = 1; i <= m; i++) for (let j = 1; j <= n; j++)
+    d[i][j] = Math.min(d[i-1][j] + 1, d[i][j-1] + 1, d[i-1][j-1] + (a[i-1] === b[j-1] ? 0 : 1));
+  return d[m][n];
+}
+// Насколько форма w похожа на начало запроса q: слово может быть длиннее (окончание, отчество).
+function prefixDist(q, w) {
+  let best = Infinity;
+  for (let k = Math.max(1, q.length - 1); k <= Math.min(w.length, q.length + 1); k++) best = Math.min(best, lev(q, w.slice(0, k)));
+  return best;
+}
+
+const $ = id => document.getElementById(id);
+const esc = s => s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let META = null;
+const shards = {}, readings = {};
+async function json(url) { const r = await fetch(url); if (!r.ok) throw new Error(url + ': ' + r.status); return r.json(); }
+async function shard(key) { return shards[key] ??= json('search/idx/' + key + '.json').catch(() => ({})); }
+async function reading(id) { return readings[id] ??= json('data/readings/' + id + '.json'); }
+
+async function init() {
+  META = (await json('search/meta.json')).cases;
+  const regs = [...new Set(META.flatMap(c => c.regions))].sort();
+  const uez = [...new Set(META.flatMap(c => c.uezd))].sort();
+  for (const r of regs) $('reg').insertAdjacentHTML('beforeend', `<option>${esc(r)}</option>`);
+  for (const u of uez) $('uez').insertAdjacentHTML('beforeend', `<option>${esc(u)}</option>`);
+  const h = new URLSearchParams(location.hash.slice(1));
+  if (h.get('q')) { $('q').value = h.get('q'); $('reg').value = h.get('r') || ''; $('uez').value = h.get('u') || ''; run(); }
+}
+
+let state = null;
+async function run() {
+  const words = (fold($('q').value).match(/[а-яѳѵіїѣ]+/g) || []).filter(w => w.length >= 3).slice(0, 3);
+  $('forms').innerHTML = ''; $('out').innerHTML = '';
+  if (!words.length) { $('status').textContent = 'Нужно слово от трёх букв.'; return; }
+  const h = new URLSearchParams({q: $('q').value}); if ($('reg').value) h.set('r', $('reg').value); if ($('uez').value) h.set('u', $('uez').value);
+  history.replaceState(null, '', '#' + h);
+  $('status').textContent = 'Ищу…';
+  const perWord = [];
+  for (const q of words) {
+    const sk = skeleton(q);
+    if (sk.length < 2) continue;
+    const idx = await shard(shardName(sk));
+    // Показываем формы до трети слова от запроса, а отмечены сразу только близкие:
+    // «булаев» с одной ошибкой — да, «белевском» — видно, но выключено.
+    const tol = Math.max(1, Math.floor(q.length / 3)), near = q.length >= 7 ? 2 : 1;
+    const forms = [];
+    for (const [w, hits] of Object.entries(idx)) {
+      if (!skeleton(w).startsWith(sk)) continue;
+      const d = prefixDist(q, w);
+      if (d > tol) continue;
+      let pages = 0; for (const ps of Object.values(hits)) pages += ps.length;
+      forms.push({w, d, hits, pages, on: d <= near});
+    }
+    forms.sort((a, b) => a.d - b.d || b.pages - a.pages);
+    perWord.push({q, forms: forms.slice(0, 60)});
+  }
+  state = perWord;
+  render();
+}
+
+function render() {
+  const reg = $('reg').value, uez = $('uez').value;
+  $('forms').innerHTML = state.map((pw, i) => pw.forms.length ? pw.forms.map((f, j) =>
+    `<label title="${f.pages} стр."><input type="checkbox" data-i="${i}" data-j="${j}" ${f.on ? 'checked' : ''}>${esc(f.w)} <span class="note">${f.pages}</span></label>`).join('')
+    : `<span class="note">«${esc(pw.q)}»: ничего похожего</span>`).join('');
+  // страницы, где есть хоть одна отмеченная форма каждого слова
+  let pages = null;
+  for (const pw of state) {
+    const s = new Map();
+    for (const f of pw.forms) if (f.on) for (const [ci, ps] of Object.entries(f.hits)) for (const p of ps) s.set(ci + ':' + p, true);
+    pages = pages ? new Map([...pages].filter(([k]) => s.has(k))) : s;
+  }
+  const byCase = {};
+  for (const k of (pages || new Map()).keys()) { const [ci, p] = k.split(':').map(Number); (byCase[ci] ??= []).push(p); }
+  let cases = Object.entries(byCase).map(([ci, ps]) => ({c: META[ci], ps: ps.sort((a, b) => a - b)}))
+    .filter(x => (!reg || x.c.regions.includes(reg)) && (!uez || x.c.uezd.includes(uez)))
+    .sort((a, b) => (a.c.year_from ?? 9999) - (b.c.year_from ?? 9999));
+  const total = cases.reduce((s, x) => s + x.ps.length, 0);
+  $('status').textContent = total ? `Страниц: ${total}, дел: ${cases.length}. Страница открывается нажатием.` : 'Ничего не нашлось. Попробуйте корень короче или другую область.';
+  $('out').innerHTML = cases.map(({c, ps}) => `<div class="case" data-id="${c.id}">
+    <h3><a href="cases/${c.id}.html">${esc(c.cipher)}</a> · ${esc(c.years || '—')} ${c.grade || ''}</h3>
+    <div class="meta">${esc(c.uezd.join(', '))} ${c.uezd.length > 1 ? 'уезды' : 'уезд'} · ${esc(c.title.length > 140 ? c.title.slice(0, 140) + '…' : c.title)} · <a href="text/${c.id}.html">всё чтение</a></div>
+    <div class="pages">${ps.slice(0, 300).map(p => `<button type="button" data-p="${p}">${esc(c.labels[p])}</button>`).join('')}${ps.length > 300 ? `<span class="note">и ещё ${ps.length - 300}</span>` : ''}</div>
+    <div class="view"></div></div>`).join('');
+}
+
+$('forms').addEventListener('change', e => {
+  const t = e.target; if (!t.dataset.i) return;
+  state[+t.dataset.i].forms[+t.dataset.j].on = t.checked; render();
+});
+$('out').addEventListener('click', async e => {
+  const b = e.target.closest('button[data-p]'); if (!b) return;
+  const box = b.closest('.case'), view = box.querySelector('.view'), p = +b.dataset.p;
+  if (b.classList.contains('on')) { b.classList.remove('on'); view.innerHTML = ''; return; }
+  box.querySelectorAll('.pages button.on').forEach(x => x.classList.remove('on')); b.classList.add('on');
+  view.innerHTML = '<p class="note">Загружаю чтение дела…</p>';
+  try {
+    const d = await reading(box.dataset.id);
+    const page = d.parts.flatMap(pt => pt.pages)[p];
+    const on = new Set(state.flatMap(pw => pw.forms.filter(f => f.on).map(f => f.w)));
+    // склеенное «сенъбулаев» тоже подсвечивается: форма из индекса стоит у него в конце
+    const hit = w => { const f = fold(w); return on.has(f) || [...on].some(x => x.length >= 5 && f.endsWith(x)); };
+    const hl = line => esc(line).replace(/[а-яёѣіїѳѵА-ЯЁѢІЇѲѴ]+/g, w => hit(w) ? `<mark>${w}</mark>` : w);
+    view.innerHTML = `<pre class="lines">${esc(page.label)}\n\n${page.lines.map(hl).join('\n')}</pre>`;
+  } catch (err) { view.innerHTML = `<p class="note">Не загрузилось: ${esc(String(err))}</p>`; }
+});
+$('f').addEventListener('submit', e => { e.preventDefault(); run(); });
+$('reg').addEventListener('change', () => state && render());
+$('uez').addEventListener('change', () => state && render());
+init().catch(err => { $('status').textContent = 'Индекс не загрузился: ' + err; });
+</script>
