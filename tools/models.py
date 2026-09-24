@@ -15,3 +15,7 @@ MODELS = {
 def model_link(name):
     url = MODELS.get(name)
     return f"[{name}]({url})" if url else f"«{name}»"
+
+
+def model_url(name):
+    return MODELS.get(name)

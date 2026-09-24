@@ -8,7 +8,7 @@ import json
 import os
 from pathlib import Path
 
-from models import model_link
+from models import model_link, model_url
 
 ROOT = Path(__file__).resolve().parent.parent
 CASES = json.loads((ROOT / "tools" / "cases.json").read_text(encoding="utf-8"))
@@ -339,8 +339,34 @@ def check(c):
     return None
 
 
+def public(c):
+    """Запись каталога для программ: то же, что в карточке, без служебных полей."""
+    here = (ROOT / "text" / f"{c['id']}.md").exists()
+    return {
+        "id": c["id"], "archive": c["arch"], "fond": c["f"], "inventory": c["o"], "unit": c["d"],
+        "title": c["title"], "years": c.get("years") or None, "state": c["state"],
+        "scans": c.get("scans") or None, "leaves": c.get("leaves"), "images": c.get("images"),
+        "case_url": c.get("case_url") or None,
+        "transcription": ({"title": c["set"], "url": c.get("set_url") or None} if c.get("set") else None),
+        "machine_reading": ({
+            "model": c["htr_model"], "model_url": model_url(c["htr_model"]),
+            "chars_per_line": float(c["htr"]), "mean_confidence": float(c["htr_conf"]) if c.get("htr_conf") else None,
+            "tabular": bool(c.get("tabular")), "grade": grade(c) or None,
+            "score": round(score(c), 2) if grade(c) else None,
+            "text": f"text/{c['id']}.md" if here else None,
+            "data": f"data/readings/{c['id']}.json" if here else None,
+        } if c.get("htr") else None),
+        "card": f"cases/{c['id']}.md",
+        "note": c.get("note") or None,
+    }
+
+
 def main():
     (ROOT / "cases").mkdir(exist_ok=True)
+    (ROOT / "data").mkdir(exist_ok=True)
+    (ROOT / "data" / "cases.json").write_text(json.dumps(
+        {"schema_version": 1, "cases": [public(c) for c in CASES]}, ensure_ascii=False, indent=1) + "\n",
+        encoding="utf-8")
     warn = [w for w in (check(c) for c in CASES) if w]
     for c in CASES:
         (ROOT / "cases" / f"{c['id']}.md").write_text(card(c), encoding="utf-8")

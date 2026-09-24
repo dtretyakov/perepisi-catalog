@@ -10,7 +10,7 @@ import os
 import re
 from pathlib import Path
 
-from models import model_link
+from models import model_link, model_url
 
 ROOT = Path(__file__).resolve().parent.parent
 CORPUS = Path(os.environ.get("GENEA_CORPUS", Path.home() / ".genea" / "corpus"))
@@ -120,8 +120,39 @@ def render(c, prts):
     return "\n".join(out) + "\n"
 
 
+def page_ref(page):
+    """Машинная ссылка на кусок: вид съёмки, номер, сторона — то же, что в заголовке markdown."""
+    m = LEAF.match(page)
+    if not m:
+        return {"label": page, "kind": None, "number": None, "side": None}
+    suf = (m.group(2) or "").lower()
+    kind = "image" if suf in ("a", "b") else "leaf"
+    return {"label": leaf_name(page), "kind": kind, "number": int(m.group(1)), "side": suf or None}
+
+
+def data(c, prts):
+    """Тот же текст, что в markdown, для программ: по записи на кусок, строки как есть."""
+    return {
+        "schema_version": 1,
+        "case": {"id": c["id"], "archive": c["arch"], "fond": c["f"], "inventory": c["o"],
+                 "unit": c["d"], "title": c["title"], "years": c.get("years") or None},
+        "model": {"name": c["htr_model"], "url": model_url(c["htr_model"])},
+        "chars_per_line": float(c["htr"]) if c.get("htr") else None,
+        "mean_confidence": float(c["htr_conf"]) if c.get("htr_conf") else None,
+        "tabular": bool(c.get("tabular")),
+        "note": "Машинное распознавание, не транскрипция: пригодно для поиска листа, не для цитирования.",
+        "parts": [
+            {"caption": caption,
+             "pages": [dict(page_ref(p["page"]), lines=[l.strip() for l in p["lines"] if l.strip()])
+                       for p in part if any(l.strip() for l in p["lines"])]}
+            for caption, part in prts
+        ],
+    }
+
+
 def main():
     (ROOT / "text").mkdir(exist_ok=True)
+    (ROOT / "data" / "readings").mkdir(parents=True, exist_ok=True)
     made = []
     for c in CASES:
         if not c.get("htr"):
@@ -131,6 +162,8 @@ def main():
             print(f"  нет чтения: {c['id']}")
             continue
         (ROOT / "text" / f"{c['id']}.md").write_text(render(c, prts), encoding="utf-8")
+        (ROOT / "data" / "readings" / f"{c['id']}.json").write_text(
+            json.dumps(data(c, prts), ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
         made.append((c["id"], sum(len(p) for _, p in prts)))
     for i, n in made:
         print(f"  {i}: листов {n}")
