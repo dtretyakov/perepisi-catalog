@@ -8,6 +8,7 @@ import json
 import os
 from pathlib import Path
 
+import geo
 from models import model_link, model_url
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -123,11 +124,66 @@ def score(c):
     return product ** (1.0 / len(parts))
 
 
+def mark_of(x):
+    return "🟩" if x >= 0.75 else "🟨" if x >= 0.45 else "🟥"
+
+
+# Плотность и уверенность говорят, берёт ли модель руку, но не то, сколько знаков
+# она читает верно. После восьмой версии плотность у всех дел поднялась под тридцать,
+# и одна плотность ставила зелёное всему подряд — в том числе Кромам 1748 года, где
+# на размеченных вручную строках верных знаков 61 %. Поэтому знак ограничен сверху
+# тем, что модель показала на книгах ТОГО ЖЕ ВРЕМЕНИ, а если размечено само дело —
+# им. Мерки — версии 8 (сентябрь 2026); более ранние версии читают не лучше, так что
+# для их чтений это тоже верхняя граница.
+MEASURED = {  # дело → доля верных знаков на размеченных вручную строках этого дела
+    "rgada-350-2-1620": 0.70,
+    "rgada-350-2-1621": 0.66,
+    "rgada-350-2-1622": 0.49,
+}
+EPOCHS = [  # (с, по, доля верных знаков или None, знак, на чём мерено)
+    (1500, 1660, None, "🟨",
+     "скоропись 1620–1650-х мерена только на отложенных листах книги 1632 года, другие листы которой "
+     "модель видела при обучении: 75 % верных знаков. Чужая рука этого времени читается хуже; "
+     "насколько — не мерено"),
+    (1661, 1700, 0.93, "🟩",
+     "1680 год: 93 % верных знаков на 101 размеченной вручную строке"),
+    (1701, 1735, 0.90, "🟩",
+     "1718–1720-е: 90 % верных знаков на размеченных вручную строках четырёх книг, "
+     "которых модель при обучении не видела"),
+    (1736, 1800, 0.61, "🟨",
+     "1740-е: 61 % верных знаков на размеченных вручную строках трёх книг 1748 года, "
+     "которых модель при обучении не видела, — от 49 до 70 % в зависимости от писца"),
+]
+
+
+def accuracy(c):
+    """(доля верных знаков или None, знак-потолок, на чём мерено) — либо None, если мерки нет."""
+    if not c.get("htr") or not (c.get("htr_model") or "").startswith("скоропись-12"):
+        return None
+    if c["id"] in MEASURED:
+        x = MEASURED[c["id"]]
+        return (x, mark_of(x), f"{round(x * 100)} % верных знаков на размеченных вручную строках этого дела")
+    y = c.get("year_from")
+    if y is None:
+        return None
+    for lo, hi, x, m, basis in EPOCHS:
+        if lo <= y <= hi:
+            return (x, m, basis)
+    return None
+
+
+ORDER = ["🟥", "🟨", "🟩"]
+
+
 def grade(c):
     s = score(c)
     if s is None:
         return None
-    return "🟩" if s >= 0.75 else "🟨" if s >= 0.45 else "🟥"
+    g = mark_of(s)
+    a = accuracy(c)
+    if a:
+        g = min(g, a[1], key=ORDER.index)
+    return g
 
 
 # Описи, набранные волонтёрами: читаются без входа и без оплаты. Страница есть
@@ -191,22 +247,21 @@ def volume(c):
 
 
 def verdict(c):
-    """Полная мера для карточки: оценка, обе величины и оговорка к ним."""
+    """Полная мера для карточки: знак, на чём он держится, и обе величины модели о самой себе."""
     mark = grade(c)
     if not mark:
         return None
-    pct = round(score(c) * 100)
     dens = f"{c['htr'].replace('.', ',')} знака на строку" if c.get("htr") else None
     conf = f"уверенность {c['htr_conf'].replace('.', ',')}" if c.get("htr_conf") else None
-    line = f"{mark} **{pct} %** — {', '.join(b for b in (dens, conf) if b)}"
+    own = ", ".join(b for b in (dens, conf) if b)
+    a = accuracy(c)
+    if a:
+        line = f"{mark} — {a[2]}. Плотность и уверенность чтения: {own}"
+    else:
+        line = f"{mark} **{round(score(c) * 100)} %** — {own}. Точность модели на книгах этого времени не мерена"
     if c.get("tabular"):
-        return (line + ". Дело табличное: имя, отчество, фамилия и возраст стоят "
-                "в разных клетках, и безупречное чтение даёт около десяти знаков "
-                "на строку — плотность здесь считается от этого предела, а не от "
-                "тридцати")
-    if conf:
-        return (line + ". Оценка — среднее геометрическое обеих величин: провал "
-                "в одной не вытягивается другой")
+        line += (". Дело табличное: имя, отчество, фамилия и возраст стоят в разных клетках, "
+                 "и безупречное чтение даёт около десяти знаков на строку")
     return line
 
 
@@ -214,9 +269,19 @@ def card(c):
     lines = [f"# {c['arch']} {cipher(c)}", ""]
     lines.append(f"**{c['title']}**")
     lines.append("")
+    for i, u in enumerate(c["uezd"]):
+        lines.append(f"{'Где: ' if i == 0 else '    '}{where_line(u, '../')}  ")
+    lines.append("")
     lines.append(f"| | |")
     lines.append(f"|---|---|")
     lines.append(f"| Годы | {c['years'] or '—'} |")
+    lines.append(f"| Что за книга | {book(c)} |")
+    if c.get("estates"):
+        lines.append(f"| Кто записан | {estates(c)} |")
+    if c.get("places"):
+        lines.append(f"| Места в деле | {places_cell(c, full=True)} |")
+    for g in c.get("guides") or []:
+        lines.append(f"| Путеводитель по листам | [{g.split('/')[-1][:-3]}](../{g}) |")
     lines.append(f"| Состояние | {STATE_MARK.get(c['state'], c['state'])} |")
     lines.append(f"| Образы | {c['scans'] or '—'} |")
     vol = volume(c)
@@ -272,18 +337,23 @@ def card(c):
         if v:
             lines.append(f"| Чего стоит чтение | {v} |")
     lines.append("")
+    for u in c["uezd"]:
+        n = neighbours(c, u)
+        if n:
+            lines.append(n)
+            lines.append("")
     if c.get("note"):
         lines.append(c["note"])
         lines.append("")
     if c.get("htr"):
         lines.append(
-            "> Машинное чтение не является транскрипцией. На этой руке модель ошибается "
-            "примерно в каждом третьем знаке и способна дать связный, но неверный "
-            "текст. Пригодно для поиска страницы по корню слова; для цитирования "
+            "> Машинное чтение не является транскрипцией. Модель ошибается в знаках "
+            "и способна дать связный, но неверный текст. Пригодно для поиска страницы по корню слова; для цитирования "
             "непригодно."
         )
         lines.append("")
-    lines.append("[← назад в каталог](../CATALOG.md) · [о правах](../rights.md)")
+    back = " · ".join(f"[{geo.REGIONS[r]}](../regions/{r}.md)" for r in regions_of(c))
+    lines.append(f"← {back} · [указатель по шифрам](../CATALOG.md) · [о правах](../rights.md)")
     return "\n".join(lines) + "\n"
 
 
@@ -299,26 +369,254 @@ def state_cell(c):
     return f"{cell}\u00a0{g}" if g else cell
 
 
+ARCH_ORDER = {"РГАДА": 0, "СПб ИИ РАН": 1, "ГАПК": 2}
+TRANSLIT = dict(zip("абвгдеёжзийклмнопрстуфхцчшщъыьэюя",
+                    ["a", "b", "v", "g", "d", "e", "e", "zh", "z", "i", "y", "k", "l", "m", "n", "o", "p", "r",
+                     "s", "t", "u", "f", "kh", "ts", "ch", "sh", "shch", "", "y", "", "e", "yu", "ya"]))
+
+
+def anchor(uezd):
+    """ASCII-якорь уезда: кириллические id заголовков GitHub и kramdown строят по-разному."""
+    return "u-" + "".join(TRANSLIT.get(ch, ch) for ch in uezd.lower())
+
+
+def num(x):
+    return int(x) if str(x).isdigit() else 10 ** 9
+
+
+def cipher_key(c):
+    return (ARCH_ORDER.get(c["arch"], 9), c["arch"], num(c["f"]), c["f"], num(c["o"]), num(c["d"]), c["d"])
+
+
+def year_key(c):
+    return (c.get("year_from") if c.get("year_from") is not None else 10 ** 4, c.get("year_to") or 0, cipher_key(c))
+
+
+def is_collection(c):
+    return c.get("kind") in geo.COLLECTION_KINDS and not str(c["d"]).isdigit()
+
+
+def regions_of(c):
+    out = []
+    for u in c["uezd"]:
+        for r in geo.region_of(u):
+            if r not in out:
+                out.append(r)
+    return sorted(out, key=list(geo.REGIONS).index)
+
+
+def where_line(u, up):
+    regs = geo.region_of(u)
+    links = " · ".join(f"[{geo.REGIONS[r]}]({up}regions/{r}.md#{anchor(u)})" for r in regs)
+    return f"{links} → **{u} уезд** ({geo.UEZDS[u][1]})"
+
+
+def book(c, uezd=None):
+    """Одной строкой, что это за книга: «II ревизия, 1744–1748», «итоги переписи 1678–1679, без имён».
+
+    У переписей название волны говорит всё, и вид книги к нему не приписывается. В Сибири
+    перепись 1678 года шла в 1680–1683 годах, и в сибирском уезде подписывается так.
+    """
+    k, w = c["kind"], c.get("census")
+    siberia = any(geo.UEZDS[u][2] for u in ([uezd] if uezd else c["uezd"]))
+    if w:
+        label = geo.CENSUS[w][1]
+        if w == "1678":
+            label = "перепись 1680–1683" if siberia else "перепись 1678–1679"
+        if k == "итоги переписи":
+            label = "итоги: " + label + ", без имён"
+        elif k == "ландратская":
+            label = "ландратская перепись 1715–1718"
+        elif k not in ("ревизская", "писцовая", "переписная"):
+            label = f"{geo.KINDS[k]} · {label}"
+    else:
+        label = geo.KINDS[k]
+    if uezd and len(c["uezd"]) > 1:
+        part = next((p for p in c.get("places") or [] if p["kind"] == "уезд" and p["name"] == uezd), None)
+        if part and part.get("leaves"):
+            label += f" · лл.{part['leaves']}"
+    return label
+
+
+def estates(c):
+    return ", ".join("все сословия" if e == "все" else e for e in c.get("estates") or [])
+
+
+def own_places(c, uezd=None):
+    return [p for p in c.get("places") or []
+            if p["kind"] != "уезд" and (uezd is None or p.get("uezd", c["uezd"][0]) == uezd)]
+
+
+def places_cell(c, uezd=None, full=False, up=""):
+    """В карточке — всё с листами; в таблице области — коротко, деревни числом."""
+    ps = own_places(c, uezd)
+    if full:
+        return "; ".join(geo.place_label(p) + (f" — {p['leaves']}" if p.get("leaves") else "") for p in ps)
+    big = [p for p in ps if p["kind"] not in ("деревня", "село")]
+    small = len(ps) - len(big)
+    names = [geo.place_label(p) for p in big]
+    if len(names) > 5:
+        names = names[:4] + [f"и ещё {len(names) - 4}"]
+    if small:
+        names.append(f"{small} {plural(small, 'деревня', 'деревни', 'деревень')}"
+                     if small > 1 else geo.place_label(next(p for p in ps if p['kind'] in ('деревня', 'село'))))
+    return ", ".join(names)
+
+
+def plural(n, one, few, many):
+    if n % 10 == 1 and n % 100 != 11:
+        return one
+    if 2 <= n % 10 <= 4 and not 12 <= n % 100 <= 14:
+        return few
+    return many
+
+
+def in_uezd(u):
+    return sorted((c for c in CASES if u in c["uezd"] and not is_collection(c)), key=year_key)
+
+
+def short(c):
+    wave = f", {geo.CENSUS[c['census']][0]} ревизия" if (c.get("census") or "").startswith("rev") else ""
+    return f"{c['years'] or '—'} {cipher(c)}{wave}"
+
+
+def neighbours(c, u):
+    if is_collection(c):
+        return None
+    row = in_uezd(u)
+    i = row.index(c)
+    prev = row[i - 1] if i > 0 else None
+    nxt = row[i + 1] if i + 1 < len(row) else None
+    if not prev and not nxt:
+        return None
+    bits = []
+    if prev:
+        bits.append(f"← раньше: [{short(prev)}]({prev['id']}.md)")
+    if nxt:
+        bits.append(f"позже: [{short(nxt)}]({nxt['id']}.md) →")
+    return f"**{u} уезд по годам** — " + " · ".join(bits)
+
+
+def coverage(u):
+    """Какие общие переписи по уезду в справочнике есть, а каких между ними пока нет.
+
+    Говорится именно «в справочнике нет», а не «не сохранилось»: отсутствие дела
+    здесь значит только, что его сюда ещё не внесли.
+    """
+    have = {c["census"] for c in in_uezd(u) if c.get("census")}
+    if not have:
+        return None
+    ranks = sorted(geo.census_rank(k) for k in have)
+    keys = list(geo.CENSUS)
+    siberia = geo.UEZDS[u][2]
+    missing = [k for k in keys[ranks[0]:ranks[-1] + 1]
+               if k not in have and not (siberia and k in geo.NOT_IN_SIBERIA)]
+    line = "Общие переписи в справочнике: " + " · ".join(geo.CENSUS[k][0] for k in keys if k in have) + "."
+    if missing:
+        line += " Между ними пока не внесены: " + "; ".join(geo.CENSUS[k][1] for k in missing) + "."
+    return line
+
+
+def region_page(slug):
+    name = geo.REGIONS[slug]
+    uezds = [u for u, (regs, _, _) in geo.UEZDS.items() if slug in regs and any(u in c["uezd"] for c in CASES)]
+    out = [f"# {name}", "",
+           "Дела по уездам, которые сейчас лежат в границах области. Внутри уезда — по годам, "
+           "так что видно, какая перепись шла раньше и какая позже.", "",
+           "Уезды: " + " · ".join(f"[{u}](#{anchor(u)})" for u in uezds), ""]
+    for u in uezds:
+        out += [f'<a id="{anchor(u)}"></a>', "", f"## {u} уезд", "", f"*{geo.UEZDS[u][1]}*", ""]
+        cov = coverage(u)
+        if cov:
+            out += [cov, ""]
+        rows = in_uezd(u)
+        if rows:
+            out += ["| Годы | Книга | Кто записан | Места | Состояние | Дело |", "|---|---|---|---|---|---|"]
+            for c in rows:
+                out.append(f"| {c['years'] or '—'} | {book(c, u)} | {estates(c) or '—'} "
+                           f"| {places_cell(c, u) or '—'} | {state_cell(c)} "
+                           f"| [{c['arch']}&nbsp;{cipher(c).replace(' ', '&nbsp;')}](../cases/{c['id']}.md) |")
+            out.append("")
+        coll = [c for c in CASES if u in c["uezd"] and is_collection(c)]
+        if coll:
+            out += ["Фонды и коллекции: " + "; ".join(
+                f"[{c['arch']} {cipher(c)}](../cases/{c['id']}.md) — {c['title']} ({c['years']})" for c in coll), ""]
+    out += ["[Все области](../README.md#gde-iskat) · [указатель мест](../places.md) · "
+            "[указатель по шифрам](../CATALOG.md)"]
+    return "\n".join(out) + "\n"
+
+
+def place_key(name):
+    return name.lower().replace("ё", "е")
+
+
+def places_page():
+    groups = {}
+    for c in CASES:
+        for p in own_places(c):
+            u = p.get("uezd", c["uezd"][0])
+            key = (place_key(p["name"]), p["kind"], u, p.get("within", ""))
+            groups.setdefault(key, (p, u, []))[2].append((c, p.get("leaves", "")))
+    out = ["# Указатель мест", "",
+           "Волости, слободы, станы, города и деревни, названные в делах справочника, — с листами, "
+           "где они известны. Названия приведены к одной форме: в самих книгах одна волость "
+           "пишется по-разному (Покшеньгская, Покшенская, Пукшенская), а деревня часто носит "
+           "двойное имя через «тож». Искать стоит и по соседним написаниям.", "",
+           "Указатель не полон: в него внесено то, что названо в описи, на карточке дела или "
+           "найдено при чтении. Места, которых здесь нет, могут стоять в деле — сплошной "
+           "поиск по именам и селениям идёт по наборам и машинным чтениям.", "",
+           "| Место | Уезд | Годы | Дело | Листы |", "|---|---|---|---|---|"]
+    for key in sorted(groups):
+        p, u, hits = groups[key]
+        label = geo.place_label(p) + (f" ({p['within']})" if p.get("within") else "")
+        for i, (c, leaves) in enumerate(sorted(hits, key=lambda h: year_key(h[0]))):
+            out.append(f"| {'**' + label + '**' if i == 0 else ''} | {u if i == 0 else ''} "
+                       f"| {c['years'] or '—'} | [{c['arch']} {cipher(c)}](cases/{c['id']}.md) | {leaves} |")
+    out += ["", "[По областям](README.md#gde-iskat) · [указатель по шифрам](CATALOG.md)"]
+    return "\n".join(out) + "\n"
+
+
 def catalog():
-    order = ["набрана", "частично набрана", "только машинное чтение", "только образы", "только опись"]
-    rows = sorted(CASES, key=lambda c: (order.index(c["state"]) if c["state"] in order else 9,
-                                        c["f"], c["o"], c["d"]))
-    out = ["# Каталог дел", "",
-           "Что уже набрано людьми, что читается только машиной, а что лежит одними образами.",
-           "",
-           "| Шифр | Годы | Состояние | Заголовок |",
-           "|---|---|---|---|"]
+    rows = sorted((c for c in CASES if not is_collection(c)), key=cipher_key)
+    out = ["# Указатель по шифрам", "",
+           "Все дела справочника по порядку шифров. Искать по месту удобнее "
+           "[по областям](README.md#gde-iskat) или по [указателю мест](places.md).", "",
+           "| Шифр | Годы | Уезд | Состояние | Заголовок |",
+           "|---|---|---|---|---|"]
     for c in rows:
         t = c["title"]
-        t = t[:70] + "…" if len(t) > 71 else t
+        t = t[:60] + "…" if len(t) > 61 else t
         out.append(
             f"| [{c['arch']} {cipher(c)}](cases/{c['id']}.md) | {c['years'] or '—'} "
-            f"| {state_cell(c)} | {t} |"
+            f"| {', '.join(c['uezd'])} | {state_cell(c)} | {t} |"
         )
+    coll = sorted((c for c in CASES if is_collection(c)), key=cipher_key)
+    if coll:
+        out += ["", "## Фонды и коллекции", "",
+                "Не отдельные дела, а фонды или группы дел: в них ищут акты и челобитные, а не переписи.", "",
+                "| Шифр | Годы | Уезд | Состояние | Заголовок |", "|---|---|---|---|---|"]
+        for c in coll:
+            out.append(f"| [{c['arch']} {cipher(c)}](cases/{c['id']}.md) | {c['years'] or '—'} "
+                       f"| {', '.join(c['uezd'])} | {state_cell(c)} | {c['title']} |")
     out += ["",
             "Ресурсы, откуда всё это берётся, — в [sources.md](sources.md); "
             "что здесь можно публиковать и почему — в [rights.md](rights.md)."]
     return "\n".join(out) + "\n"
+
+
+def regions_list():
+    """Строки для README: область → уезды → сколько дел."""
+    lines = []
+    for slug, name in geo.REGIONS.items():
+        uezds = [u for u, (regs, _, _) in geo.UEZDS.items() if slug in regs]
+        parts = []
+        for u in uezds:
+            n = sum(1 for c in CASES if u in c["uezd"])
+            if n:
+                parts.append(f"[{u}](regions/{slug}.md#{anchor(u)}) — {n} {plural(n, 'дело', 'дела', 'дел')}")
+        if parts:
+            lines.append(f"- **[{name}](regions/{slug}.md)**: " + ", ".join(parts))
+    return lines
 
 
 def check(c):
@@ -353,16 +651,43 @@ def public(c):
             "chars_per_line": float(c["htr"]), "mean_confidence": float(c["htr_conf"]) if c.get("htr_conf") else None,
             "tabular": bool(c.get("tabular")), "grade": grade(c) or None,
             "score": round(score(c), 2) if grade(c) else None,
+            "accuracy": ({"char_accuracy": accuracy(c)[0], "basis": accuracy(c)[2]} if accuracy(c) else None),
             "text": f"text/{c['id']}.md" if here else None,
             "data": f"data/readings/{c['id']}.json" if here else None,
         } if c.get("htr") else None),
         "card": f"cases/{c['id']}.md",
+        "regions": [geo.REGIONS[r] for r in regions_of(c)],
+        "uezd": c["uezd"],
+        "year_from": c.get("year_from"), "year_to": c.get("year_to"),
+        "kind": c["kind"],
+        "census": ({"key": c["census"], "title": geo.CENSUS[c["census"]][1]} if c.get("census") else None),
+        "estates": c.get("estates") or [],
+        "places": [{k: p[k] for k in ("name", "kind", "uezd", "within", "leaves") if p.get(k)}
+                   | ({"uezd": c["uezd"][0]} if "uezd" not in p and p["kind"] != "уезд" else {})
+                   for p in c.get("places") or []],
+        "guides": c.get("guides") or [],
         "note": c.get("note") or None,
     }
 
 
+def readme():
+    """Список областей в README собирается, остальной README пишется руками."""
+    path = ROOT / "README.md"
+    text = path.read_text(encoding="utf-8")
+    a, b = "<!-- regions -->", "<!-- /regions -->"
+    if a not in text:
+        return
+    head, rest = text.split(a, 1)
+    tail = rest.split(b, 1)[1]
+    path.write_text(head + a + "\n" + "\n".join(regions_list()) + "\n" + b + tail, encoding="utf-8")
+
+
 def main():
+    bad = [f"{c['id']}: {e}" for c in CASES for e in geo.validate(c)]
+    if bad:
+        raise SystemExit("cases.json не сходится со словарями tools/geo.py:\n  " + "\n  ".join(bad))
     (ROOT / "cases").mkdir(exist_ok=True)
+    (ROOT / "regions").mkdir(exist_ok=True)
     (ROOT / "data").mkdir(exist_ok=True)
     (ROOT / "data" / "cases.json").write_text(json.dumps(
         {"schema_version": 1, "cases": [public(c) for c in CASES]}, ensure_ascii=False, indent=1) + "\n",
@@ -371,7 +696,15 @@ def main():
     for c in CASES:
         (ROOT / "cases" / f"{c['id']}.md").write_text(card(c), encoding="utf-8")
     (ROOT / "CATALOG.md").write_text(catalog(), encoding="utf-8")
-    print(f"карточек {len(CASES)}, каталог собран")
+    slugs = sorted({r for c in CASES for r in regions_of(c)}, key=list(geo.REGIONS).index)
+    for old in (ROOT / "regions").glob("*.md"):
+        if old.stem not in slugs:
+            old.unlink()
+    for r in slugs:
+        (ROOT / "regions" / f"{r}.md").write_text(region_page(r), encoding="utf-8")
+    (ROOT / "places.md").write_text(places_page(), encoding="utf-8")
+    readme()
+    print(f"карточек {len(CASES)}, областей {len(slugs)}, каталог собран")
     for w in warn:
         print("  ПРОВЕРЬТЕ:", w)
 
