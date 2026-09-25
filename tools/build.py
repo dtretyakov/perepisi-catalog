@@ -254,22 +254,16 @@ def volume(c):
 
 
 def verdict(c):
-    """Полная мера для карточки: знак, на чём он держится, и обе величины модели о самой себе."""
+    """Строка карточки: знак и числа. Как знак выставлен, объясняет README, а не каждая карточка."""
     mark = grade(c)
     if not mark:
         return None
-    dens = f"{c['htr'].replace('.', ',')} знака на строку" if c.get("htr") else None
-    conf = f"уверенность {c['htr_conf'].replace('.', ',')}" if c.get("htr_conf") else None
-    own = ", ".join(b for b in (dens, conf) if b)
-    a = accuracy(c)
-    if a:
-        line = f"{mark} — {a[2]}. Плотность и уверенность чтения: {own}"
-    else:
-        line = f"{mark} **{round(score(c) * 100)} %** — {own}. Точность модели на книгах этого времени не мерена"
+    bits = [f"{c['htr'].replace('.', ',')} знака на строку"] if c.get("htr") else []
+    if c.get("htr_conf"):
+        bits.append(f"уверенность {c['htr_conf'].replace('.', ',')}")
     if c.get("tabular"):
-        line += (". Дело табличное: имя, отчество, фамилия и возраст стоят в разных клетках, "
-                 "и безупречное чтение даёт около десяти знаков на строку")
-    return line
+        bits.append("дело табличное")
+    return f"{mark} — " + ", ".join(bits)
 
 
 def card(c):
