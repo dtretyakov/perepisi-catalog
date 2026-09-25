@@ -18,7 +18,21 @@
     "title": "Ю. В. Коновалов",
     "url": "https://dzen.ru/id/67a7640d5ffb060a06bd0e60"
    },
-   "machine_reading": null,
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 21.9,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟨",
+    "score": 0.62,
+    "accuracy": {
+     "char_accuracy": null,
+     "basis": "скоропись 1620–1650-х мерена только на отложенных листах книги 1632 года, другие листы которой модель видела при обучении: 75 % верных знаков. Чужая рука этого времени читается хуже; насколько — не мерено"
+    },
+    "text": "text/rgada-214-1-35.md",
+    "data": "data/readings/rgada-214-1-35.json"
+   },
    "card": "cases/rgada-214-1-35.md",
    "regions": [
     "Свердловская область"
@@ -60,7 +74,21 @@
     "title": "Ю. В. Коновалов",
     "url": "https://dzen.ru/id/67a7640d5ffb060a06bd0e60"
    },
-   "machine_reading": null,
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 24.9,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟨",
+    "score": 0.81,
+    "accuracy": {
+     "char_accuracy": null,
+     "basis": "скоропись 1620–1650-х мерена только на отложенных листах книги 1632 года, другие листы которой модель видела при обучении: 75 % верных знаков. Чужая рука этого времени читается хуже; насколько — не мерено"
+    },
+    "text": "text/rgada-214-1-41.md",
+    "data": "data/readings/rgada-214-1-41.json"
+   },
    "card": "cases/rgada-214-1-41.md",
    "regions": [
     "Свердловская область"
@@ -96,7 +124,21 @@
     "title": "Ю. В. Коновалов",
     "url": "https://dzen.ru/id/67a7640d5ffb060a06bd0e60"
    },
-   "machine_reading": null,
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 24.5,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟨",
+    "score": 0.78,
+    "accuracy": {
+     "char_accuracy": null,
+     "basis": "скоропись 1620–1650-х мерена только на отложенных листах книги 1632 года, другие листы которой модель видела при обучении: 75 % верных знаков. Чужая рука этого времени читается хуже; насколько — не мерено"
+    },
+    "text": "text/rgada-214-1-43.md",
+    "data": "data/readings/rgada-214-1-43.json"
+   },
    "card": "cases/rgada-214-1-43.md",
    "regions": [
     "Свердловская область"
@@ -132,7 +174,21 @@
     "title": "Ю. В. Коновалов",
     "url": "https://dzen.ru/id/67a7640d5ffb060a06bd0e60"
    },
-   "machine_reading": null,
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 27.5,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟨",
+    "score": 0.97,
+    "accuracy": {
+     "char_accuracy": null,
+     "basis": "скоропись 1620–1650-х мерена только на отложенных листах книги 1632 года, другие листы которой модель видела при обучении: 75 % верных знаков. Чужая рука этого времени читается хуже; насколько — не мерено"
+    },
+    "text": "text/rgada-214-1-106.md",
+    "data": "data/readings/rgada-214-1-106.json"
+   },
    "card": "cases/rgada-214-1-106.md",
    "regions": [
     "Свердловская область"
@@ -168,7 +224,21 @@
     "title": "Ю. В. Коновалов",
     "url": "https://dzen.ru/id/67a7640d5ffb060a06bd0e60"
    },
-   "machine_reading": null,
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 25.4,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟨",
+    "score": 0.84,
+    "accuracy": {
+     "char_accuracy": null,
+     "basis": "скоропись 1620–1650-х мерена только на отложенных листах книги 1632 года, другие листы которой модель видела при обучении: 75 % верных знаков. Чужая рука этого времени читается хуже; насколько — не мерено"
+    },
+    "text": "text/rgada-214-1-225.md",
+    "data": "data/readings/rgada-214-1-225.json"
+   },
    "card": "cases/rgada-214-1-225.md",
    "regions": [
     "Свердловская область"
@@ -210,7 +280,21 @@
     "title": "Ю. В. Коновалов",
     "url": "https://dzen.ru/id/67a7640d5ffb060a06bd0e60"
    },
-   "machine_reading": null,
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 28.5,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟨",
+    "score": 1.0,
+    "accuracy": {
+     "char_accuracy": null,
+     "basis": "скоропись 1620–1650-х мерена только на отложенных листах книги 1632 года, другие листы которой модель видела при обучении: 75 % верных знаков. Чужая рука этого времени читается хуже; насколько — не мерено"
+    },
+    "text": "text/rgada-214-1-341.md",
+    "data": "data/readings/rgada-214-1-341.json"
+   },
    "card": "cases/rgada-214-1-341.md",
    "regions": [
     "Свердловская область"
@@ -246,7 +330,21 @@
     "title": "Ю. В. Коновалов",
     "url": "https://dzen.ru/id/67a7640d5ffb060a06bd0e60"
    },
-   "machine_reading": null,
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 28.0,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟨",
+    "score": 1.0,
+    "accuracy": {
+     "char_accuracy": null,
+     "basis": "скоропись 1620–1650-х мерена только на отложенных листах книги 1632 года, другие листы которой модель видела при обучении: 75 % верных знаков. Чужая рука этого времени читается хуже; насколько — не мерено"
+    },
+    "text": "text/rgada-214-1-389.md",
+    "data": "data/readings/rgada-214-1-389.json"
+   },
    "card": "cases/rgada-214-1-389.md",
    "regions": [
     "Свердловская область"
@@ -283,7 +381,21 @@
     "title": "Ю. В. Коновалов",
     "url": "https://dzen.ru/id/67a7640d5ffb060a06bd0e60"
    },
-   "machine_reading": null,
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 22.2,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟨",
+    "score": 0.64,
+    "accuracy": {
+     "char_accuracy": null,
+     "basis": "скоропись 1620–1650-х мерена только на отложенных листах книги 1632 года, другие листы которой модель видела при обучении: 75 % верных знаков. Чужая рука этого времени читается хуже; насколько — не мерено"
+    },
+    "text": "text/rgada-214-1-10.md",
+    "data": "data/readings/rgada-214-1-10.json"
+   },
    "card": "cases/rgada-214-1-10.md",
    "regions": [
     "Свердловская область"
@@ -325,7 +437,21 @@
     "title": "Ю. В. Коновалов",
     "url": "https://dzen.ru/id/67a7640d5ffb060a06bd0e60"
    },
-   "machine_reading": null,
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 44.1,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟩",
+    "score": 1.0,
+    "accuracy": {
+     "char_accuracy": 0.93,
+     "basis": "1680 год: 93 % верных знаков на 101 размеченной вручную строке"
+    },
+    "text": "text/rgada-214-1-697.md",
+    "data": "data/readings/rgada-214-1-697.json"
+   },
    "card": "cases/rgada-214-1-697.md",
    "regions": [
     "Свердловская область"
@@ -364,7 +490,21 @@
     "title": "census1710.narod.ru",
     "url": "https://census1710.narod.ru/perepis/214_1_1539.htm"
    },
-   "machine_reading": null,
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 40.1,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟩",
+    "score": 1.0,
+    "accuracy": {
+     "char_accuracy": 0.9,
+     "basis": "1718–1720-е: 90 % верных знаков на размеченных вручную строках четырёх книг, которых модель при обучении не видела"
+    },
+    "text": "text/rgada-214-1-1539.md",
+    "data": "data/readings/rgada-214-1-1539.json"
+   },
    "card": "cases/rgada-214-1-1539.md",
    "regions": [
     "Свердловская область"
@@ -403,7 +543,21 @@
     "title": "Ю. В. Коновалов",
     "url": "https://dzen.ru/id/67a7640d5ffb060a06bd0e60"
    },
-   "machine_reading": null,
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 27.8,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟩",
+    "score": 0.99,
+    "accuracy": {
+     "char_accuracy": 0.9,
+     "basis": "1718–1720-е: 90 % верных знаков на размеченных вручную строках четырёх книг, которых модель при обучении не видела"
+    },
+    "text": "text/rgada-214-1-1615.md",
+    "data": "data/readings/rgada-214-1-1615.json"
+   },
    "card": "cases/rgada-214-1-1615.md",
    "regions": [
     "Свердловская область"
@@ -570,9 +724,9 @@
    "case_url": "https://online.archives.ru/guide/10000000001014/10000001151014/10000005098014/10000393912014/",
    "transcription": null,
    "machine_reading": {
-    "model": "скоропись-12",
-    "model_url": "https://doi.org/10.5281/zenodo.22905381",
-    "chars_per_line": 28.1,
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 35.6,
     "mean_confidence": null,
     "tabular": false,
     "grade": "🟩",
@@ -1022,13 +1176,27 @@
    "unit": "1343",
    "title": "Сказки о государственных крестьянах Лавельской, Нехченской, Сулецкой, Керенской, Малопенежской волостей Кеврольского уезда (III ревизия), ч. III",
    "years": "1762-1768",
-   "state": "только образы",
+   "state": "только машинное чтение",
    "scans": "ГИС УИАД",
    "leaves": null,
    "images": null,
    "case_url": "https://online.archives.ru/guide/10000000001014/10000000297014/10000003363014/10000003795014/",
    "transcription": null,
-   "machine_reading": null,
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 20.2,
+    "mean_confidence": null,
+    "tabular": true,
+    "grade": "🟨",
+    "score": 1.0,
+    "accuracy": {
+     "char_accuracy": 0.61,
+     "basis": "1740-е: 61 % верных знаков на размеченных вручную строках трёх книг 1748 года, которых модель при обучении не видела, — от 49 до 70 % в зависимости от писца"
+    },
+    "text": "text/rgada-350-2-1343.md",
+    "data": "data/readings/rgada-350-2-1343.json"
+   },
    "card": "cases/rgada-350-2-1343.md",
    "regions": [
     "Архангельская область"
@@ -1337,13 +1505,27 @@
    "unit": "518",
    "title": "Переписная книга г. Хлынова и Вятского (Хлыновского) уезда переписи В. П. Отяева, лл.1-607",
    "years": "1646",
-   "state": "только образы",
+   "state": "только машинное чтение",
    "scans": "ГИС УИАД (платно) · rodnaya-vyatka.ru (даром)",
    "leaves": null,
    "images": null,
    "case_url": "https://online.archives.ru/guide/10000000001014/10000001151014/10000005098014/10000393524014/",
    "transcription": null,
-   "machine_reading": null,
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 28.6,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟨",
+    "score": 1.0,
+    "accuracy": {
+     "char_accuracy": null,
+     "basis": "скоропись 1620–1650-х мерена только на отложенных листах книги 1632 года, другие листы которой модель видела при обучении: 75 % верных знаков. Чужая рука этого времени читается хуже; насколько — не мерено"
+    },
+    "text": "text/rgada-1209-1-518.md",
+    "data": "data/readings/rgada-1209-1-518.json"
+   },
    "card": "cases/rgada-1209-1-518.md",
    "regions": [
     "Кировская область"
@@ -1388,7 +1570,21 @@
     "title": "rodnaya-vyatka.ru",
     "url": "https://rodnaya-vyatka.ru/"
    },
-   "machine_reading": null,
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 25.0,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟨",
+    "score": 0.81,
+    "accuracy": {
+     "char_accuracy": null,
+     "basis": "скоропись 1620–1650-х мерена только на отложенных листах книги 1632 года, другие листы которой модель видела при обучении: 75 % верных знаков. Чужая рука этого времени читается хуже; насколько — не мерено"
+    },
+    "text": "text/rgada-1209-1-519.md",
+    "data": "data/readings/rgada-1209-1-519.json"
+   },
    "card": "cases/rgada-1209-1-519.md",
    "regions": [
     "Кировская область"
@@ -1523,7 +1719,21 @@
     "title": "zz-project.ru",
     "url": "https://zz-project.ru/1678-g-perepis-knyazya-belskogo-votchiny-stroganovykh"
    },
-   "machine_reading": null,
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 25.2,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟩",
+    "score": 0.82,
+    "accuracy": {
+     "char_accuracy": 0.93,
+     "basis": "1680 год: 93 % верных знаков на 101 размеченной вручную строке"
+    },
+    "text": "text/rgada-1209-1-442.md",
+    "data": "data/readings/rgada-1209-1-442.json"
+   },
    "card": "cases/rgada-1209-1-442.md",
    "regions": [
     "Пермский край"
@@ -2552,11 +2762,11 @@
     "chars_per_line": 22.6,
     "mean_confidence": null,
     "tabular": true,
-    "grade": "🟩",
+    "grade": "🟨",
     "score": 1.0,
     "accuracy": {
-     "char_accuracy": 0.93,
-     "basis": "1680 год: 93 % верных знаков на 101 размеченной вручную строке"
+     "char_accuracy": null,
+     "basis": "1680 год: 93 % верных знаков на 101 размеченной вручную строке. Книга табличная, а мерка снята со сплошного текста: табличные книги этого времени не мерены и читаются хуже"
     },
     "text": "text/rgada-350-1-51.md",
     "data": "data/readings/rgada-350-1-51.json"
@@ -2564,7 +2774,8 @@
    "card": "cases/rgada-350-1-51.md",
    "regions": [
     "Архангельская область",
-    "Мурманская область"
+    "Мурманская область",
+    "Вологодская область"
    ],
    "uezd": [
     "Важский",
@@ -3292,13 +3503,27 @@
    "unit": "261",
    "title": "Книга переписная Тобольского уезда письма Л. М. Поскочина: десятинная пашня, крестьянские собинные пашенные и заложные земли и сенные покосы",
    "years": "1680-1683",
-   "state": "только образы",
+   "state": "только машинное чтение",
    "scans": "ГИС УИАД",
    "leaves": 1610,
    "images": 3229,
    "case_url": "https://online.archives.ru/guide/10000000001014/10000000161014/10000005316014/10000247609014/",
    "transcription": null,
-   "machine_reading": null,
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 45.3,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟩",
+    "score": 1.0,
+    "accuracy": {
+     "char_accuracy": 0.93,
+     "basis": "1680 год: 93 % верных знаков на 101 размеченной вручную строке"
+    },
+    "text": "text/rgada-214-5-261.md",
+    "data": "data/readings/rgada-214-5-261.json"
+   },
    "card": "cases/rgada-214-5-261.md",
    "regions": [
     "Тюменская область",
@@ -3747,11 +3972,11 @@
     "chars_per_line": 16.2,
     "mean_confidence": null,
     "tabular": true,
-    "grade": "🟩",
+    "grade": "🟨",
     "score": 1.0,
     "accuracy": {
-     "char_accuracy": 0.9,
-     "basis": "1718–1720-е: 90 % верных знаков на размеченных вручную строках четырёх книг, которых модель при обучении не видела"
+     "char_accuracy": null,
+     "basis": "1718–1720-е: 90 % верных знаков на размеченных вручную строках четырёх книг, которых модель при обучении не видела. Книга табличная, а мерка снята со сплошного текста: табличные книги этого времени не мерены и читаются хуже"
     },
     "text": "text/rgada-350-2-1614.md",
     "data": "data/readings/rgada-350-2-1614.json"
@@ -4087,6 +4312,2853 @@
    ],
    "guides": [],
    "note": "Книга 1645/46 года по Верхотурскому уезду; в ней Тагильская слобода (лл. 21об, 25, 78). Заголовок дела в описи общий — «Документы Сибирского приказа», содержание видно только по образам. Книга списочная: имена в столбик, строки короткие по природе. Прочитано машинно версией 8 модели (сентябрь 2026)."
+  },
+  {
+   "id": "rgada-1209-1-153",
+   "archive": "РГАДА",
+   "fond": "1209",
+   "inventory": "1",
+   "unit": "153",
+   "title": "1) Дозорная и межевая книга дворцовых сел и слобод Казанского уезда, писца Н. Обухова, 1599 г. (лл. 435-571). Список XVII в. Печ. оп. № 823. 2) Дозорные, отдельные, оброчные и переписные книги дворцовых сел и земель (дворцовых, поместных, вотчинных, порозжих и ясачных) Свияжского и Тетюшского уездов, разных дозорщиков, писцов и переписчиков, 1616-1622 гг. Подлинники. и списки. Печ. оп. № 825-840, 842-843, 2635, 2636. Ф. Казанской приказной избы. Лл. 1-679",
+   "years": "1599-1622",
+   "state": "частично набрана",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": null,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000001151014/10000005098014/10000393918014/",
+   "transcription": {
+    "title": "1670.ru",
+    "url": "https://1670.ru/census/1621/osa/"
+   },
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 30.1,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟨",
+    "score": 1.0,
+    "accuracy": {
+     "char_accuracy": null,
+     "basis": "скоропись 1620–1650-х мерена только на отложенных листах книги 1632 года, другие листы которой модель видела при обучении: 75 % верных знаков. Чужая рука этого времени читается хуже; насколько — не мерено"
+    },
+    "text": "text/rgada-1209-1-153.md",
+    "data": "data/readings/rgada-1209-1-153.json"
+   },
+   "card": "cases/rgada-1209-1-153.md",
+   "regions": [
+    "Пермский край",
+    "Республика Татарстан"
+   ],
+   "uezd": [
+    "Казанский"
+   ],
+   "year_from": 1599,
+   "year_to": 1622,
+   "kind": "писцовая",
+   "census": null,
+   "estates": [
+    "все"
+   ],
+   "places": [
+    {
+     "name": "Оса",
+     "kind": "город",
+     "uezd": "Казанский"
+    }
+   ],
+   "guides": [],
+   "note": "Сборник дозорных и межевых книг Казанского, Свияжского и Тетюшского уездов. Набрана только дозорная книга Осы 1621 года."
+  },
+  {
+   "id": "rgada-1209-1-474",
+   "archive": "РГАДА",
+   "fond": "1209",
+   "inventory": "1",
+   "unit": "474",
+   "title": "Переписная книга г. Соликамска и Соликамского уезда, переписи воеводы П. К. Елизарова. Подлинник. Печ. оп. № 2533.",
+   "years": "1647",
+   "state": "частично набрана",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": null,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000001151014/10000005098014/10000393332014/",
+   "transcription": {
+    "title": "1670.ru",
+    "url": "https://1670.ru/census/1647/kishert/"
+   },
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 31.8,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟨",
+    "score": 1.0,
+    "accuracy": {
+     "char_accuracy": null,
+     "basis": "скоропись 1620–1650-х мерена только на отложенных листах книги 1632 года, другие листы которой модель видела при обучении: 75 % верных знаков. Чужая рука этого времени читается хуже; насколько — не мерено"
+    },
+    "text": "text/rgada-1209-1-474.md",
+    "data": "data/readings/rgada-1209-1-474.json"
+   },
+   "card": "cases/rgada-1209-1-474.md",
+   "regions": [
+    "Пермский край"
+   ],
+   "uezd": [
+    "Соликамский"
+   ],
+   "year_from": 1647,
+   "year_to": 1647,
+   "kind": "переписная",
+   "census": {
+    "key": "1646",
+    "title": "перепись 1646–1647"
+   },
+   "estates": [
+    "все"
+   ],
+   "places": [
+    {
+     "name": "Кишертская",
+     "kind": "слобода",
+     "uezd": "Соликамский"
+    }
+   ],
+   "guides": [],
+   "note": "Переписная книга Соликамска 1647 года (переписи П. К. Елизарова). Набрана часть — Кишертская слобода."
+  },
+  {
+   "id": "rgada-1209-1-480",
+   "archive": "РГАДА",
+   "fond": "1209",
+   "inventory": "1",
+   "unit": "480",
+   "title": "Писцовая и межевая книга г. Тотьмы и Тотемского уезда, писца Ф. Дурова. Подлинник. Печ. оп. № 2661. Лл. 1-555",
+   "years": "1623-1625",
+   "state": "набрана",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": null,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000001151014/10000005098014/10000393536014/",
+   "transcription": {
+    "title": "ВГД, дневник Falleg-heimur",
+    "url": "https://forum.vgd.ru/6043/"
+   },
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 25.6,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟨",
+    "score": 0.85,
+    "accuracy": {
+     "char_accuracy": null,
+     "basis": "скоропись 1620–1650-х мерена только на отложенных листах книги 1632 года, другие листы которой модель видела при обучении: 75 % верных знаков. Чужая рука этого времени читается хуже; насколько — не мерено"
+    },
+    "text": "text/rgada-1209-1-480.md",
+    "data": "data/readings/rgada-1209-1-480.json"
+   },
+   "card": "cases/rgada-1209-1-480.md",
+   "regions": [
+    "Вологодская область"
+   ],
+   "uezd": [
+    "Тотемский"
+   ],
+   "year_from": 1623,
+   "year_to": 1625,
+   "kind": "писцовая",
+   "census": {
+    "key": "1620s",
+    "title": "писцовое описание 1620-х"
+   },
+   "estates": [
+    "все"
+   ],
+   "places": [
+    {
+     "name": "Тотьма",
+     "kind": "город",
+     "uezd": "Тотемский"
+    }
+   ],
+   "guides": [],
+   "note": "Набор дословный, без меток листов. Сверено с образами."
+  },
+  {
+   "id": "rgada-1209-1-89",
+   "archive": "РГАДА",
+   "fond": "1209",
+   "inventory": "1",
+   "unit": "89",
+   "title": "1) Писцовая книга г. Слободского и Слободского уезда, писца И. Б. Доможирова, 1629 г. (лл. 1-764, 942-950). Печ. оп. № 2495. 2) Писцовая книга г. Шестакова и Шестаковского уезда, писца И. Б. Доможирова, 1628 г. (лл. 765-950). Пев. оп. № 2887. Подлинники. Лл. 1-968",
+   "years": "1628-1629",
+   "state": "набрана",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": null,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000001151014/10000005098014/10000393448014/",
+   "transcription": {
+    "title": "«Родная Вятка»",
+    "url": "https://rodnaya-vyatka.ru/censuses"
+   },
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 24.6,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟨",
+    "score": 0.79,
+    "accuracy": {
+     "char_accuracy": null,
+     "basis": "скоропись 1620–1650-х мерена только на отложенных листах книги 1632 года, другие листы которой модель видела при обучении: 75 % верных знаков. Чужая рука этого времени читается хуже; насколько — не мерено"
+    },
+    "text": "text/rgada-1209-1-89.md",
+    "data": "data/readings/rgada-1209-1-89.json"
+   },
+   "card": "cases/rgada-1209-1-89.md",
+   "regions": [
+    "Кировская область"
+   ],
+   "uezd": [
+    "Слободской"
+   ],
+   "year_from": 1628,
+   "year_to": 1629,
+   "kind": "писцовая",
+   "census": {
+    "key": "1620s",
+    "title": "писцовое описание 1620-х"
+   },
+   "estates": [
+    "все"
+   ],
+   "places": [
+    {
+     "name": "Слободской",
+     "kind": "город",
+     "uezd": "Слободской"
+    }
+   ],
+   "guides": [],
+   "note": "Писцовые книги Слободского (1629, лл.1-764) и Шестаковского (1628, лл.765-950) уездов письма И. Б. Доможирова. В наборе счёт напечатан цифрами, на листе — словами."
+  },
+  {
+   "id": "rgada-1209-1-90",
+   "archive": "РГАДА",
+   "fond": "1209",
+   "inventory": "1",
+   "unit": "90",
+   "title": "1) Писцовая книга г. Хлынова и Хлыновского уезда, писца А. М. Толочанова, 1628 г. (лл. 1-210). Печ. оп. № 2765. 2) Писцовая книга г. Орлова (на р. Вятке) и Орловского уезда, писца А. М. Толочанова, 1628 г. (лл. 211-275). Печ. оп. № 1937. 3) Писцовая книга г. Котельнича и Котельнического уезда, писца А. М. Толочанова, 1628 г. (лл. 276-327). Печ. оп. № 1133. Подлинники. Лл. 1-327",
+   "years": "1628",
+   "state": "набрана",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": null,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000001151014/10000005098014/10000393447014/",
+   "transcription": {
+    "title": "«Родная Вятка»",
+    "url": "https://rodnaya-vyatka.ru/censuses"
+   },
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 34.4,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟨",
+    "score": 1.0,
+    "accuracy": {
+     "char_accuracy": null,
+     "basis": "скоропись 1620–1650-х мерена только на отложенных листах книги 1632 года, другие листы которой модель видела при обучении: 75 % верных знаков. Чужая рука этого времени читается хуже; насколько — не мерено"
+    },
+    "text": "text/rgada-1209-1-90.md",
+    "data": "data/readings/rgada-1209-1-90.json"
+   },
+   "card": "cases/rgada-1209-1-90.md",
+   "regions": [
+    "Кировская область"
+   ],
+   "uezd": [
+    "Вятский"
+   ],
+   "year_from": 1628,
+   "year_to": 1628,
+   "kind": "писцовая",
+   "census": {
+    "key": "1620s",
+    "title": "писцовое описание 1620-х"
+   },
+   "estates": [
+    "все"
+   ],
+   "places": [
+    {
+     "name": "Хлынов",
+     "kind": "город",
+     "uezd": "Вятский"
+    },
+    {
+     "name": "Орлов",
+     "kind": "город",
+     "uezd": "Вятский"
+    },
+    {
+     "name": "Котельнич",
+     "kind": "город",
+     "uezd": "Вятский"
+    }
+   ],
+   "guides": [],
+   "note": "Писцовые книги Хлынова (лл.1-210), Орлова (лл.211-275) и Котельнича (лл.276-327) письма А. М. Толочанова."
+  },
+  {
+   "id": "rgada-214-1-24",
+   "archive": "РГАДА",
+   "fond": "214",
+   "inventory": "1",
+   "unit": "24",
+   "title": "Документы Сибирского приказа; в составе — окладная книга Верхотурской приказной избы 1631 г.",
+   "years": "1631",
+   "state": "частично набрана",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": 224,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000000161014/10000005259014/10000477837014/",
+   "transcription": {
+    "title": "Ю. В. Коновалов",
+    "url": "https://dzen.ru/id/67a7640d5ffb060a06bd0e60"
+   },
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 24.3,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟨",
+    "score": 0.77,
+    "accuracy": {
+     "char_accuracy": null,
+     "basis": "скоропись 1620–1650-х мерена только на отложенных листах книги 1632 года, другие листы которой модель видела при обучении: 75 % верных знаков. Чужая рука этого времени читается хуже; насколько — не мерено"
+    },
+    "text": "text/rgada-214-1-24.md",
+    "data": "data/readings/rgada-214-1-24.json"
+   },
+   "card": "cases/rgada-214-1-24.md",
+   "regions": [
+    "Свердловская область"
+   ],
+   "uezd": [
+    "Верхотурский"
+   ],
+   "year_from": 1631,
+   "year_to": 1631,
+   "kind": "окладная",
+   "census": null,
+   "estates": [],
+   "places": [],
+   "guides": [],
+   "note": "Набрана окладная книга 1631 года."
+  },
+  {
+   "id": "rgada-214-1-27",
+   "archive": "РГАДА",
+   "fond": "214",
+   "inventory": "1",
+   "unit": "27",
+   "title": "Документы Сибирского приказа; в составе — окладная книга Верхотурского уезда 1630 г.",
+   "years": "1630",
+   "state": "частично набрана",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": 716,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000000161014/10000005259014/10000477873014/",
+   "transcription": {
+    "title": "Ю. В. Коновалов",
+    "url": "https://dzen.ru/id/67a7640d5ffb060a06bd0e60"
+   },
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 21.0,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟨",
+    "score": 0.56,
+    "accuracy": {
+     "char_accuracy": null,
+     "basis": "скоропись 1620–1650-х мерена только на отложенных листах книги 1632 года, другие листы которой модель видела при обучении: 75 % верных знаков. Чужая рука этого времени читается хуже; насколько — не мерено"
+    },
+    "text": "text/rgada-214-1-27.md",
+    "data": "data/readings/rgada-214-1-27.json"
+   },
+   "card": "cases/rgada-214-1-27.md",
+   "regions": [
+    "Свердловская область"
+   ],
+   "uezd": [
+    "Верхотурский"
+   ],
+   "year_from": 1630,
+   "year_to": 1630,
+   "kind": "окладная",
+   "census": null,
+   "estates": [],
+   "places": [],
+   "guides": [],
+   "note": "Набрана окладная книга 1630 года; остальное дело — другие документы."
+  },
+  {
+   "id": "rgada-214-1-68",
+   "archive": "РГАДА",
+   "fond": "214",
+   "inventory": "1",
+   "unit": "68",
+   "title": "Документы Сибирского приказа; в составе — окладная книга Верхотурской приказной избы 1636 г.",
+   "years": "1635/36",
+   "state": "частично набрана",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": 399,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000000161014/10000005259014/10000477980014/",
+   "transcription": {
+    "title": "Ю. В. Коновалов",
+    "url": "https://dzen.ru/id/67a7640d5ffb060a06bd0e60"
+   },
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 25.4,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟨",
+    "score": 0.84,
+    "accuracy": {
+     "char_accuracy": null,
+     "basis": "скоропись 1620–1650-х мерена только на отложенных листах книги 1632 года, другие листы которой модель видела при обучении: 75 % верных знаков. Чужая рука этого времени читается хуже; насколько — не мерено"
+    },
+    "text": "text/rgada-214-1-68.md",
+    "data": "data/readings/rgada-214-1-68.json"
+   },
+   "card": "cases/rgada-214-1-68.md",
+   "regions": [
+    "Свердловская область"
+   ],
+   "uezd": [
+    "Верхотурский"
+   ],
+   "year_from": 1635,
+   "year_to": 1636,
+   "kind": "окладная",
+   "census": null,
+   "estates": [],
+   "places": [],
+   "guides": [],
+   "note": "Набрана окладная книга 1636 года."
+  },
+  {
+   "id": "rgada-214-1-108",
+   "archive": "РГАДА",
+   "fond": "214",
+   "inventory": "1",
+   "unit": "108",
+   "title": "Книга десятинной пашни Верхотурского уезда",
+   "years": "1637/38",
+   "state": "набрана",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": 346,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000000161014/10000005259014/10000477690014/",
+   "transcription": {
+    "title": "Ю. В. Коновалов",
+    "url": "https://dzen.ru/id/67a7640d5ffb060a06bd0e60"
+   },
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 25.7,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟨",
+    "score": 0.86,
+    "accuracy": {
+     "char_accuracy": null,
+     "basis": "скоропись 1620–1650-х мерена только на отложенных листах книги 1632 года, другие листы которой модель видела при обучении: 75 % верных знаков. Чужая рука этого времени читается хуже; насколько — не мерено"
+    },
+    "text": "text/rgada-214-1-108.md",
+    "data": "data/readings/rgada-214-1-108.json"
+   },
+   "card": "cases/rgada-214-1-108.md",
+   "regions": [
+    "Свердловская область"
+   ],
+   "uezd": [
+    "Верхотурский"
+   ],
+   "year_from": 1637,
+   "year_to": 1638,
+   "kind": "десятинная пашня",
+   "census": null,
+   "estates": [
+    "пашенные крестьяне"
+   ],
+   "places": [],
+   "guides": [],
+   "note": null
+  },
+  {
+   "id": "rgada-214-1-140",
+   "archive": "РГАДА",
+   "fond": "214",
+   "inventory": "1",
+   "unit": "140",
+   "title": "Документы Сибирского приказа; в составе — книга хлебных окладов Верхотурской приказной избы на 1641/42 г.",
+   "years": "1641/42",
+   "state": "частично набрана",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": 345,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000000161014/10000005259014/10000477726014/",
+   "transcription": {
+    "title": "Ю. В. Коновалов",
+    "url": "https://dzen.ru/id/67a7640d5ffb060a06bd0e60"
+   },
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 25.0,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟨",
+    "score": 0.81,
+    "accuracy": {
+     "char_accuracy": null,
+     "basis": "скоропись 1620–1650-х мерена только на отложенных листах книги 1632 года, другие листы которой модель видела при обучении: 75 % верных знаков. Чужая рука этого времени читается хуже; насколько — не мерено"
+    },
+    "text": "text/rgada-214-1-140.md",
+    "data": "data/readings/rgada-214-1-140.json"
+   },
+   "card": "cases/rgada-214-1-140.md",
+   "regions": [
+    "Свердловская область"
+   ],
+   "uezd": [
+    "Верхотурский"
+   ],
+   "year_from": 1641,
+   "year_to": 1642,
+   "kind": "окладная",
+   "census": null,
+   "estates": [],
+   "places": [],
+   "guides": [],
+   "note": "Набрана книга хлебных окладов."
+  },
+  {
+   "id": "rgada-214-1-143",
+   "archive": "РГАДА",
+   "fond": "214",
+   "inventory": "1",
+   "unit": "143",
+   "title": "Документы Сибирского приказа; в составе — ясачная книга 1641 г. (лл.725-911)",
+   "years": "1641",
+   "state": "частично набрана",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": 926,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000000161014/10000005259014/10000477729014/",
+   "transcription": {
+    "title": "Ю. В. Коновалов",
+    "url": "https://dzen.ru/id/67a7640d5ffb060a06bd0e60"
+   },
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 28.1,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟨",
+    "score": 1.0,
+    "accuracy": {
+     "char_accuracy": null,
+     "basis": "скоропись 1620–1650-х мерена только на отложенных листах книги 1632 года, другие листы которой модель видела при обучении: 75 % верных знаков. Чужая рука этого времени читается хуже; насколько — не мерено"
+    },
+    "text": "text/rgada-214-1-143.md",
+    "data": "data/readings/rgada-214-1-143.json"
+   },
+   "card": "cases/rgada-214-1-143.md",
+   "regions": [
+    "Свердловская область"
+   ],
+   "uezd": [
+    "Верхотурский"
+   ],
+   "year_from": 1641,
+   "year_to": 1641,
+   "kind": "ясачная",
+   "census": null,
+   "estates": [
+    "ясачные"
+   ],
+   "places": [],
+   "guides": [],
+   "note": "Набор ясачной книги сокращён: на каждой стороне пропуски («…»). Для поиска по имени годится, для счёта — нет."
+  },
+  {
+   "id": "rgada-214-1-203",
+   "archive": "РГАДА",
+   "fond": "214",
+   "inventory": "1",
+   "unit": "203",
+   "title": "Документы Сибирского приказа; в составе — книга хлебных и соляных окладов Верхотурской приказной избы на 1645 г.",
+   "years": "1645",
+   "state": "частично набрана",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": 358,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000000161014/10000005259014/10000477797014/",
+   "transcription": {
+    "title": "Ю. В. Коновалов",
+    "url": "https://dzen.ru/id/67a7640d5ffb060a06bd0e60"
+   },
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 25.4,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟨",
+    "score": 0.84,
+    "accuracy": {
+     "char_accuracy": null,
+     "basis": "скоропись 1620–1650-х мерена только на отложенных листах книги 1632 года, другие листы которой модель видела при обучении: 75 % верных знаков. Чужая рука этого времени читается хуже; насколько — не мерено"
+    },
+    "text": "text/rgada-214-1-203.md",
+    "data": "data/readings/rgada-214-1-203.json"
+   },
+   "card": "cases/rgada-214-1-203.md",
+   "regions": [
+    "Свердловская область"
+   ],
+   "uezd": [
+    "Верхотурский"
+   ],
+   "year_from": 1645,
+   "year_to": 1645,
+   "kind": "окладная",
+   "census": null,
+   "estates": [],
+   "places": [],
+   "guides": [],
+   "note": "Набрана книга окладов 1645 года."
+  },
+  {
+   "id": "rgada-214-1-90",
+   "archive": "РГАДА",
+   "fond": "214",
+   "inventory": "1",
+   "unit": "90",
+   "title": "Документы Сибирского приказа; в составе — книга 1637 г. по Верхотурскому уезду",
+   "years": "1637",
+   "state": "частично набрана",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": 300,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000000161014/10000005259014/10000478007014/",
+   "transcription": {
+    "title": "Ю. В. Коновалов",
+    "url": "https://dzen.ru/id/67a7640d5ffb060a06bd0e60"
+   },
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 24.5,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟨",
+    "score": 0.78,
+    "accuracy": {
+     "char_accuracy": null,
+     "basis": "скоропись 1620–1650-х мерена только на отложенных листах книги 1632 года, другие листы которой модель видела при обучении: 75 % верных знаков. Чужая рука этого времени читается хуже; насколько — не мерено"
+    },
+    "text": "text/rgada-214-1-90.md",
+    "data": "data/readings/rgada-214-1-90.json"
+   },
+   "card": "cases/rgada-214-1-90.md",
+   "regions": [
+    "Свердловская область"
+   ],
+   "uezd": [
+    "Верхотурский"
+   ],
+   "year_from": 1637,
+   "year_to": 1637,
+   "kind": "именная",
+   "census": null,
+   "estates": [],
+   "places": [],
+   "guides": [],
+   "note": "Набрана часть — около тридцати листов."
+  },
+  {
+   "id": "rgada-214-1-131",
+   "archive": "РГАДА",
+   "fond": "214",
+   "inventory": "1",
+   "unit": "131",
+   "title": "Документы Сибирского приказа; в составе — книга 1640 г. по Киргинской слободе",
+   "years": "1640",
+   "state": "частично набрана",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": 236,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000000161014/10000005259014/10000477716014/",
+   "transcription": {
+    "title": "1670.ru",
+    "url": "https://1670.ru/census/1640/tobolsk/kirginskaya-sloboda/"
+   },
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 24.7,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟨",
+    "score": 0.79,
+    "accuracy": {
+     "char_accuracy": null,
+     "basis": "скоропись 1620–1650-х мерена только на отложенных листах книги 1632 года, другие листы которой модель видела при обучении: 75 % верных знаков. Чужая рука этого времени читается хуже; насколько — не мерено"
+    },
+    "text": "text/rgada-214-1-131.md",
+    "data": "data/readings/rgada-214-1-131.json"
+   },
+   "card": "cases/rgada-214-1-131.md",
+   "regions": [
+    "Тюменская область",
+    "Курганская область"
+   ],
+   "uezd": [
+    "Тобольский"
+   ],
+   "year_from": 1640,
+   "year_to": 1640,
+   "kind": "именная",
+   "census": null,
+   "estates": [],
+   "places": [
+    {
+     "name": "Киргинская",
+     "kind": "слобода",
+     "uezd": "Тобольский"
+    }
+   ],
+   "guides": [],
+   "note": "Набрана часть: Киргинская слобода."
+  },
+  {
+   "id": "rgada-214-1-141",
+   "archive": "РГАДА",
+   "fond": "214",
+   "inventory": "1",
+   "unit": "141",
+   "title": "Документы Сибирского приказа; в составе — книга 1641 г. по Киргинской слободе",
+   "years": "1641",
+   "state": "частично набрана",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": 268,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000000161014/10000005259014/10000477727014/",
+   "transcription": {
+    "title": "1670.ru",
+    "url": "https://1670.ru/census/1641/tobolsk/kirginskaya-sloboda/"
+   },
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 25.3,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟨",
+    "score": 0.83,
+    "accuracy": {
+     "char_accuracy": null,
+     "basis": "скоропись 1620–1650-х мерена только на отложенных листах книги 1632 года, другие листы которой модель видела при обучении: 75 % верных знаков. Чужая рука этого времени читается хуже; насколько — не мерено"
+    },
+    "text": "text/rgada-214-1-141.md",
+    "data": "data/readings/rgada-214-1-141.json"
+   },
+   "card": "cases/rgada-214-1-141.md",
+   "regions": [
+    "Тюменская область",
+    "Курганская область"
+   ],
+   "uezd": [
+    "Тобольский"
+   ],
+   "year_from": 1641,
+   "year_to": 1641,
+   "kind": "именная",
+   "census": null,
+   "estates": [],
+   "places": [
+    {
+     "name": "Киргинская",
+     "kind": "слобода",
+     "uezd": "Тобольский"
+    }
+   ],
+   "guides": [],
+   "note": "Набрана часть: Киргинская слобода."
+  },
+  {
+   "id": "rgada-214-1-160",
+   "archive": "РГАДА",
+   "fond": "214",
+   "inventory": "1",
+   "unit": "160",
+   "title": "Документы Сибирского приказа; в составе — книги 1644 г. по Киргинской и Мурзинской слободам",
+   "years": "1644",
+   "state": "частично набрана",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": 263,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000000161014/10000005259014/10000477748014/",
+   "transcription": {
+    "title": "1670.ru",
+    "url": "https://1670.ru/census/1644/tobolsk/kirginskaya-sloboda/"
+   },
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 25.1,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟨",
+    "score": 0.82,
+    "accuracy": {
+     "char_accuracy": null,
+     "basis": "скоропись 1620–1650-х мерена только на отложенных листах книги 1632 года, другие листы которой модель видела при обучении: 75 % верных знаков. Чужая рука этого времени читается хуже; насколько — не мерено"
+    },
+    "text": "text/rgada-214-1-160.md",
+    "data": "data/readings/rgada-214-1-160.json"
+   },
+   "card": "cases/rgada-214-1-160.md",
+   "regions": [
+    "Тюменская область",
+    "Курганская область"
+   ],
+   "uezd": [
+    "Тобольский"
+   ],
+   "year_from": 1644,
+   "year_to": 1644,
+   "kind": "именная",
+   "census": null,
+   "estates": [],
+   "places": [
+    {
+     "name": "Киргинская",
+     "kind": "слобода",
+     "uezd": "Тобольский"
+    },
+    {
+     "name": "Мурзинская",
+     "kind": "слобода",
+     "uezd": "Тобольский"
+    }
+   ],
+   "guides": [],
+   "note": "Набраны части по Киргинской и Мурзинской слободам."
+  },
+  {
+   "id": "rgada-214-1-1317",
+   "archive": "РГАДА",
+   "fond": "214",
+   "inventory": "1",
+   "unit": "1317",
+   "title": "Документы Сибирского приказа; в составе — переписная книга г. Тобольска 1710 г.",
+   "years": "1710",
+   "state": "набрана",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": 829,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000000161014/10000005295014/10000478688014/",
+   "transcription": {
+    "title": "census1710.narod.ru",
+    "url": "http://census1710.narod.ru/perepis/214_1_1317.htm"
+   },
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 33.8,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟩",
+    "score": 1.0,
+    "accuracy": {
+     "char_accuracy": 0.9,
+     "basis": "1718–1720-е: 90 % верных знаков на размеченных вручную строках четырёх книг, которых модель при обучении не видела"
+    },
+    "text": "text/rgada-214-1-1317.md",
+    "data": "data/readings/rgada-214-1-1317.json"
+   },
+   "card": "cases/rgada-214-1-1317.md",
+   "regions": [
+    "Тюменская область",
+    "Курганская область"
+   ],
+   "uezd": [
+    "Тобольский"
+   ],
+   "year_from": 1710,
+   "year_to": 1710,
+   "kind": "переписная",
+   "census": {
+    "key": "1710",
+    "title": "перепись 1710 года"
+   },
+   "estates": [
+    "все"
+   ],
+   "places": [
+    {
+     "name": "Тобольск",
+     "kind": "город",
+     "uezd": "Тобольский"
+    }
+   ],
+   "guides": [],
+   "note": null
+  },
+  {
+   "id": "rgada-214-1-1468",
+   "archive": "РГАДА",
+   "fond": "214",
+   "inventory": "1",
+   "unit": "1468",
+   "title": "Документы Сибирского приказа; в составе — переписная книга г. Чердыни и уезда 1707-1708 гг.",
+   "years": "1707-1708",
+   "state": "набрана",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": 956,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000000161014/10000005295014/10000479170014/",
+   "transcription": {
+    "title": "census1710.narod.ru",
+    "url": "http://census1710.narod.ru/perepis/214_1_1468.htm"
+   },
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 38.7,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟩",
+    "score": 1.0,
+    "accuracy": {
+     "char_accuracy": 0.9,
+     "basis": "1718–1720-е: 90 % верных знаков на размеченных вручную строках четырёх книг, которых модель при обучении не видела"
+    },
+    "text": "text/rgada-214-1-1468.md",
+    "data": "data/readings/rgada-214-1-1468.json"
+   },
+   "card": "cases/rgada-214-1-1468.md",
+   "regions": [
+    "Пермский край"
+   ],
+   "uezd": [
+    "Чердынский"
+   ],
+   "year_from": 1707,
+   "year_to": 1708,
+   "kind": "переписная",
+   "census": {
+    "key": "1710",
+    "title": "перепись 1710 года"
+   },
+   "estates": [
+    "все"
+   ],
+   "places": [
+    {
+     "name": "Чердынь",
+     "kind": "город",
+     "uezd": "Чердынский"
+    }
+   ],
+   "guides": [],
+   "note": null
+  },
+  {
+   "id": "rgada-214-1-1497",
+   "archive": "РГАДА",
+   "fond": "214",
+   "inventory": "1",
+   "unit": "1497",
+   "title": "Документы Сибирского приказа; в составе — переписная книга вотчин Г. Д. Строганова в Соликамском уезде 1710 г.",
+   "years": "1710",
+   "state": "набрана",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": 1211,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000000161014/10000005295014/10000479199014/",
+   "transcription": {
+    "title": "census1710.narod.ru",
+    "url": "http://census1710.narod.ru/perepis/214_1_1497.htm"
+   },
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 35.5,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟩",
+    "score": 1.0,
+    "accuracy": {
+     "char_accuracy": 0.9,
+     "basis": "1718–1720-е: 90 % верных знаков на размеченных вручную строках четырёх книг, которых модель при обучении не видела"
+    },
+    "text": "text/rgada-214-1-1497.md",
+    "data": "data/readings/rgada-214-1-1497.json"
+   },
+   "card": "cases/rgada-214-1-1497.md",
+   "regions": [
+    "Пермский край"
+   ],
+   "uezd": [
+    "Соликамский"
+   ],
+   "year_from": 1710,
+   "year_to": 1710,
+   "kind": "переписная",
+   "census": {
+    "key": "1710",
+    "title": "перепись 1710 года"
+   },
+   "estates": [
+    "все"
+   ],
+   "places": [],
+   "guides": [],
+   "note": null
+  },
+  {
+   "id": "rgada-214-1-1521",
+   "archive": "РГАДА",
+   "fond": "214",
+   "inventory": "1",
+   "unit": "1521",
+   "title": "Документы Сибирского приказа; в составе — переписная книга г. Чердыни и уезда 1710 г.",
+   "years": "1710",
+   "state": "набрана",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": 396,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000000161014/10000005295014/10000479223014/",
+   "transcription": {
+    "title": "census1710.narod.ru",
+    "url": "http://census1710.narod.ru/perepis/214_1_1521.htm"
+   },
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 36.9,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟩",
+    "score": 1.0,
+    "accuracy": {
+     "char_accuracy": 0.9,
+     "basis": "1718–1720-е: 90 % верных знаков на размеченных вручную строках четырёх книг, которых модель при обучении не видела"
+    },
+    "text": "text/rgada-214-1-1521.md",
+    "data": "data/readings/rgada-214-1-1521.json"
+   },
+   "card": "cases/rgada-214-1-1521.md",
+   "regions": [
+    "Пермский край"
+   ],
+   "uezd": [
+    "Чердынский"
+   ],
+   "year_from": 1710,
+   "year_to": 1710,
+   "kind": "переписная",
+   "census": {
+    "key": "1710",
+    "title": "перепись 1710 года"
+   },
+   "estates": [
+    "все"
+   ],
+   "places": [
+    {
+     "name": "Чердынь",
+     "kind": "город",
+     "uezd": "Чердынский"
+    }
+   ],
+   "guides": [],
+   "note": null
+  },
+  {
+   "id": "rgada-214-1-1524",
+   "archive": "РГАДА",
+   "fond": "214",
+   "inventory": "1",
+   "unit": "1524",
+   "title": "Документы Сибирского приказа; в составе — переписная книга Тобольского уезда переписи И. Томилова 1710 г.",
+   "years": "1710",
+   "state": "набрана",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": 384,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000000161014/10000005295014/10000479226014/",
+   "transcription": {
+    "title": "census1710.narod.ru",
+    "url": "http://census1710.narod.ru/perepis/214_1_1524.htm"
+   },
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 44.0,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟩",
+    "score": 1.0,
+    "accuracy": {
+     "char_accuracy": 0.9,
+     "basis": "1718–1720-е: 90 % верных знаков на размеченных вручную строках четырёх книг, которых модель при обучении не видела"
+    },
+    "text": "text/rgada-214-1-1524.md",
+    "data": "data/readings/rgada-214-1-1524.json"
+   },
+   "card": "cases/rgada-214-1-1524.md",
+   "regions": [
+    "Тюменская область",
+    "Курганская область"
+   ],
+   "uezd": [
+    "Тобольский"
+   ],
+   "year_from": 1710,
+   "year_to": 1710,
+   "kind": "переписная",
+   "census": {
+    "key": "1710",
+    "title": "перепись 1710 года"
+   },
+   "estates": [
+    "все"
+   ],
+   "places": [],
+   "guides": [],
+   "note": null
+  },
+  {
+   "id": "rgada-214-1-1525",
+   "archive": "РГАДА",
+   "fond": "214",
+   "inventory": "1",
+   "unit": "1525",
+   "title": "Документы Сибирского приказа; в составе — переписная книга Тобольского уезда переписи А. И. Парфентьева 1710 г.",
+   "years": "1710",
+   "state": "набрана",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": 620,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000000161014/10000005295014/10000479227014/",
+   "transcription": {
+    "title": "census1710.narod.ru",
+    "url": "http://census1710.narod.ru/perepis/214_1_1525.htm"
+   },
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 52.6,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟩",
+    "score": 1.0,
+    "accuracy": {
+     "char_accuracy": 0.9,
+     "basis": "1718–1720-е: 90 % верных знаков на размеченных вручную строках четырёх книг, которых модель при обучении не видела"
+    },
+    "text": "text/rgada-214-1-1525.md",
+    "data": "data/readings/rgada-214-1-1525.json"
+   },
+   "card": "cases/rgada-214-1-1525.md",
+   "regions": [
+    "Тюменская область",
+    "Курганская область"
+   ],
+   "uezd": [
+    "Тобольский"
+   ],
+   "year_from": 1710,
+   "year_to": 1710,
+   "kind": "переписная",
+   "census": {
+    "key": "1710",
+    "title": "перепись 1710 года"
+   },
+   "estates": [
+    "все"
+   ],
+   "places": [],
+   "guides": [],
+   "note": null
+  },
+  {
+   "id": "rgada-214-1-1526",
+   "archive": "РГАДА",
+   "fond": "214",
+   "inventory": "1",
+   "unit": "1526",
+   "title": "Документы Сибирского приказа; в составе — переписная книга Тобольского уезда переписи В. С. Турского 1710 г.",
+   "years": "1710",
+   "state": "набрана",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": 370,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000000161014/10000005295014/10000479228014/",
+   "transcription": {
+    "title": "census1710.narod.ru",
+    "url": "http://census1710.narod.ru/perepis/214_1_1526.htm"
+   },
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 41.1,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟩",
+    "score": 1.0,
+    "accuracy": {
+     "char_accuracy": 0.9,
+     "basis": "1718–1720-е: 90 % верных знаков на размеченных вручную строках четырёх книг, которых модель при обучении не видела"
+    },
+    "text": "text/rgada-214-1-1526.md",
+    "data": "data/readings/rgada-214-1-1526.json"
+   },
+   "card": "cases/rgada-214-1-1526.md",
+   "regions": [
+    "Тюменская область",
+    "Курганская область"
+   ],
+   "uezd": [
+    "Тобольский"
+   ],
+   "year_from": 1710,
+   "year_to": 1710,
+   "kind": "переписная",
+   "census": {
+    "key": "1710",
+    "title": "перепись 1710 года"
+   },
+   "estates": [
+    "все"
+   ],
+   "places": [],
+   "guides": [],
+   "note": null
+  },
+  {
+   "id": "rgada-214-1-1528",
+   "archive": "РГАДА",
+   "fond": "214",
+   "inventory": "1",
+   "unit": "1528",
+   "title": "Документы Сибирского приказа; в составе — переписная книга Тобольского уезда переписи Ф. Протопопова 1710 г.",
+   "years": "1710",
+   "state": "набрана",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": 276,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000000161014/10000005295014/10000479230014/",
+   "transcription": {
+    "title": "census1710.narod.ru",
+    "url": "http://census1710.narod.ru/perepis/214_1_1528.htm"
+   },
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 40.4,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟩",
+    "score": 1.0,
+    "accuracy": {
+     "char_accuracy": 0.9,
+     "basis": "1718–1720-е: 90 % верных знаков на размеченных вручную строках четырёх книг, которых модель при обучении не видела"
+    },
+    "text": "text/rgada-214-1-1528.md",
+    "data": "data/readings/rgada-214-1-1528.json"
+   },
+   "card": "cases/rgada-214-1-1528.md",
+   "regions": [
+    "Тюменская область",
+    "Курганская область"
+   ],
+   "uezd": [
+    "Тобольский"
+   ],
+   "year_from": 1710,
+   "year_to": 1710,
+   "kind": "переписная",
+   "census": {
+    "key": "1710",
+    "title": "перепись 1710 года"
+   },
+   "estates": [
+    "все"
+   ],
+   "places": [],
+   "guides": [],
+   "note": null
+  },
+  {
+   "id": "rgada-214-1-1538",
+   "archive": "РГАДА",
+   "fond": "214",
+   "inventory": "1",
+   "unit": "1538",
+   "title": "Документы Сибирского приказа; в составе — переписная книга г. Соликамска и уезда 1710 г.",
+   "years": "1710",
+   "state": "набрана",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": 407,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000000161014/10000005295014/10000479240014/",
+   "transcription": {
+    "title": "census1710.narod.ru",
+    "url": "http://census1710.narod.ru/perepis/214_1_1538.htm"
+   },
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 30.9,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟩",
+    "score": 1.0,
+    "accuracy": {
+     "char_accuracy": 0.9,
+     "basis": "1718–1720-е: 90 % верных знаков на размеченных вручную строках четырёх книг, которых модель при обучении не видела"
+    },
+    "text": "text/rgada-214-1-1538.md",
+    "data": "data/readings/rgada-214-1-1538.json"
+   },
+   "card": "cases/rgada-214-1-1538.md",
+   "regions": [
+    "Пермский край"
+   ],
+   "uezd": [
+    "Соликамский"
+   ],
+   "year_from": 1710,
+   "year_to": 1710,
+   "kind": "переписная",
+   "census": {
+    "key": "1710",
+    "title": "перепись 1710 года"
+   },
+   "estates": [
+    "все"
+   ],
+   "places": [
+    {
+     "name": "Соликамск",
+     "kind": "город",
+     "uezd": "Соликамский"
+    }
+   ],
+   "guides": [],
+   "note": null
+  },
+  {
+   "id": "rgada-214-1-1587",
+   "archive": "РГАДА",
+   "fond": "214",
+   "inventory": "1",
+   "unit": "1587",
+   "title": "Документы Сибирского приказа; в составе — сказки I ревизии 1719 г. по слободам Тобольского уезда",
+   "years": "1719",
+   "state": "частично набрана",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": 1097,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000000161014/10000005295014/10000479289014/",
+   "transcription": {
+    "title": "1670.ru",
+    "url": "https://1670.ru/census/1719/bagaryakskaya-sloboda/"
+   },
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 31.5,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟩",
+    "score": 1.0,
+    "accuracy": {
+     "char_accuracy": 0.9,
+     "basis": "1718–1720-е: 90 % верных знаков на размеченных вручную строках четырёх книг, которых модель при обучении не видела"
+    },
+    "text": "text/rgada-214-1-1587.md",
+    "data": "data/readings/rgada-214-1-1587.json"
+   },
+   "card": "cases/rgada-214-1-1587.md",
+   "regions": [
+    "Тюменская область",
+    "Курганская область"
+   ],
+   "uezd": [
+    "Тобольский"
+   ],
+   "year_from": 1719,
+   "year_to": 1719,
+   "kind": "ревизская",
+   "census": {
+    "key": "rev1",
+    "title": "I ревизия, 1719–1727"
+   },
+   "estates": [
+    "все"
+   ],
+   "places": [
+    {
+     "name": "Багарякская",
+     "kind": "слобода",
+     "uezd": "Тобольский"
+    },
+    {
+     "name": "Калиновская",
+     "kind": "слобода",
+     "uezd": "Тобольский"
+    },
+    {
+     "name": "Камышевская",
+     "kind": "слобода",
+     "uezd": "Тобольский"
+    },
+    {
+     "name": "Новопышминская",
+     "kind": "слобода",
+     "uezd": "Тобольский"
+    },
+    {
+     "name": "Туринская",
+     "kind": "слобода",
+     "uezd": "Тобольский"
+    },
+    {
+     "name": "Уецкая",
+     "kind": "слобода",
+     "uezd": "Тобольский"
+    },
+    {
+     "name": "Краснослободский",
+     "kind": "острог",
+     "uezd": "Тобольский"
+    }
+   ],
+   "guides": [],
+   "note": "Набраны слободы по отдельности на 1670.ru; часть набрана и Ю. В. Коноваловым."
+  },
+  {
+   "id": "rgada-214-5-2149",
+   "archive": "РГАДА",
+   "fond": "214",
+   "inventory": "5",
+   "unit": "2149",
+   "title": "Книга переписная населения Кайгородского уезда.",
+   "years": "1711",
+   "state": "набрана",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": 48,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000000161014/10000005316014/10000249505014/",
+   "transcription": {
+    "title": "census1710.narod.ru",
+    "url": "http://census1710.narod.ru/perepis/214_5_2149.htm"
+   },
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 37.5,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟩",
+    "score": 1.0,
+    "accuracy": {
+     "char_accuracy": 0.9,
+     "basis": "1718–1720-е: 90 % верных знаков на размеченных вручную строках четырёх книг, которых модель при обучении не видела"
+    },
+    "text": "text/rgada-214-5-2149.md",
+    "data": "data/readings/rgada-214-5-2149.json"
+   },
+   "card": "cases/rgada-214-5-2149.md",
+   "regions": [
+    "Республика Коми"
+   ],
+   "uezd": [
+    "Кайгородский"
+   ],
+   "year_from": 1711,
+   "year_to": 1711,
+   "kind": "переписная",
+   "census": {
+    "key": "1710",
+    "title": "перепись 1710 года"
+   },
+   "estates": [
+    "все"
+   ],
+   "places": [],
+   "guides": [],
+   "note": null
+  },
+  {
+   "id": "rgada-214-5-2175",
+   "archive": "РГАДА",
+   "fond": "214",
+   "inventory": "5",
+   "unit": "2175",
+   "title": "Переписная книга населения и дворов города Соликамска и уезда. См. также ф. 214 оп. 1. ед. хр. 1149.",
+   "years": "1711",
+   "state": "набрана",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": 565,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000000161014/10000005316014/10000249531014/",
+   "transcription": {
+    "title": "census1710.narod.ru",
+    "url": "http://census1710.narod.ru/perepis/214_5_2175.htm"
+   },
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 30.0,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟩",
+    "score": 1.0,
+    "accuracy": {
+     "char_accuracy": 0.9,
+     "basis": "1718–1720-е: 90 % верных знаков на размеченных вручную строках четырёх книг, которых модель при обучении не видела"
+    },
+    "text": "text/rgada-214-5-2175.md",
+    "data": "data/readings/rgada-214-5-2175.json"
+   },
+   "card": "cases/rgada-214-5-2175.md",
+   "regions": [
+    "Пермский край"
+   ],
+   "uezd": [
+    "Соликамский"
+   ],
+   "year_from": 1711,
+   "year_to": 1711,
+   "kind": "переписная",
+   "census": {
+    "key": "1710",
+    "title": "перепись 1710 года"
+   },
+   "estates": [
+    "все"
+   ],
+   "places": [
+    {
+     "name": "Соликамск",
+     "kind": "город",
+     "uezd": "Соликамский"
+    }
+   ],
+   "guides": [],
+   "note": null
+  },
+  {
+   "id": "rgada-214-5-434",
+   "archive": "РГАДА",
+   "fond": "214",
+   "inventory": "5",
+   "unit": "434",
+   "title": "Переписная книга Кецкого острога и слобод (Ялуторовской, Ингалинской, Терсяцкой и др.) Тобольского уезда переписи В. Я. Шульгина",
+   "years": "1710",
+   "state": "набрана",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": null,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000000161014/10000005316014/10000247785014/",
+   "transcription": {
+    "title": "census1710.narod.ru",
+    "url": "http://census1710.narod.ru/perepis/214_5_434.htm"
+   },
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 38.3,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟩",
+    "score": 1.0,
+    "accuracy": {
+     "char_accuracy": 0.9,
+     "basis": "1718–1720-е: 90 % верных знаков на размеченных вручную строках четырёх книг, которых модель при обучении не видела"
+    },
+    "text": "text/rgada-214-5-434.md",
+    "data": "data/readings/rgada-214-5-434.json"
+   },
+   "card": "cases/rgada-214-5-434.md",
+   "regions": [
+    "Тюменская область",
+    "Курганская область"
+   ],
+   "uezd": [
+    "Тобольский"
+   ],
+   "year_from": 1710,
+   "year_to": 1710,
+   "kind": "переписная",
+   "census": {
+    "key": "1710",
+    "title": "перепись 1710 года"
+   },
+   "estates": [
+    "все"
+   ],
+   "places": [
+    {
+     "name": "Кецкий",
+     "kind": "острог",
+     "uezd": "Тобольский"
+    },
+    {
+     "name": "Ялуторовская",
+     "kind": "слобода",
+     "uezd": "Тобольский"
+    },
+    {
+     "name": "Ингалинская",
+     "kind": "слобода",
+     "uezd": "Тобольский"
+    },
+    {
+     "name": "Терсяцкая",
+     "kind": "слобода",
+     "uezd": "Тобольский"
+    }
+   ],
+   "guides": [],
+   "note": "Опись даёт 12 листов, а образов 1425 — число листов в описи ошибочно."
+  },
+  {
+   "id": "rgada-214-5-32",
+   "archive": "РГАДА",
+   "fond": "214",
+   "inventory": "5",
+   "unit": "32",
+   "title": "Книга таможенная сбора десятой, поголовной, проезжих и др. пошлин с товаров промышленных и торговых людей (Верхотурская).",
+   "years": "1637",
+   "state": "только машинное чтение",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": 276,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000000161014/10000005316014/10000247380014/",
+   "transcription": null,
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 25.3,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟨",
+    "score": 0.83,
+    "accuracy": {
+     "char_accuracy": null,
+     "basis": "скоропись 1620–1650-х мерена только на отложенных листах книги 1632 года, другие листы которой модель видела при обучении: 75 % верных знаков. Чужая рука этого времени читается хуже; насколько — не мерено"
+    },
+    "text": "text/rgada-214-5-32.md",
+    "data": "data/readings/rgada-214-5-32.json"
+   },
+   "card": "cases/rgada-214-5-32.md",
+   "regions": [
+    "Свердловская область"
+   ],
+   "uezd": [
+    "Верхотурский"
+   ],
+   "year_from": 1637,
+   "year_to": 1637,
+   "kind": "денежный сбор",
+   "census": null,
+   "estates": [],
+   "places": [],
+   "guides": [],
+   "note": null
+  },
+  {
+   "id": "rgada-214-5-164",
+   "archive": "РГАДА",
+   "fond": "214",
+   "inventory": "5",
+   "unit": "164",
+   "title": "Приходо-расходная книга денежных доходов г. Верхотурья.",
+   "years": "1669",
+   "state": "только машинное чтение",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": 390,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000000161014/10000005316014/10000247512014/",
+   "transcription": null,
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 30.5,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟩",
+    "score": 1.0,
+    "accuracy": {
+     "char_accuracy": 0.93,
+     "basis": "1680 год: 93 % верных знаков на 101 размеченной вручную строке"
+    },
+    "text": "text/rgada-214-5-164.md",
+    "data": "data/readings/rgada-214-5-164.json"
+   },
+   "card": "cases/rgada-214-5-164.md",
+   "regions": [
+    "Свердловская область"
+   ],
+   "uezd": [
+    "Верхотурский"
+   ],
+   "year_from": 1669,
+   "year_to": 1669,
+   "kind": "денежный сбор",
+   "census": null,
+   "estates": [],
+   "places": [
+    {
+     "name": "Верхотурье",
+     "kind": "город",
+     "uezd": "Верхотурский"
+    }
+   ],
+   "guides": [],
+   "note": null
+  },
+  {
+   "id": "rgada-214-5-212",
+   "archive": "РГАДА",
+   "fond": "214",
+   "inventory": "5",
+   "unit": "212",
+   "title": "Книга доимочная откупным пошлинам оброчным деньгам и другим по Верхотурскому уезду.",
+   "years": "1675-1676",
+   "state": "только машинное чтение",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": 33,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000000161014/10000005316014/10000247560014/",
+   "transcription": null,
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 30.2,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟩",
+    "score": 1.0,
+    "accuracy": {
+     "char_accuracy": 0.93,
+     "basis": "1680 год: 93 % верных знаков на 101 размеченной вручную строке"
+    },
+    "text": "text/rgada-214-5-212.md",
+    "data": "data/readings/rgada-214-5-212.json"
+   },
+   "card": "cases/rgada-214-5-212.md",
+   "regions": [
+    "Свердловская область"
+   ],
+   "uezd": [
+    "Верхотурский"
+   ],
+   "year_from": 1675,
+   "year_to": 1676,
+   "kind": "денежный сбор",
+   "census": null,
+   "estates": [],
+   "places": [],
+   "guides": [],
+   "note": null
+  },
+  {
+   "id": "rgada-214-5-221",
+   "archive": "РГАДА",
+   "fond": "214",
+   "inventory": "5",
+   "unit": "221",
+   "title": "Книга доимочная сбора откупных пошлин, оброчных, ссудных денег и др. по Верхотурскому уезду.",
+   "years": "1676-1677",
+   "state": "только машинное чтение",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": null,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000000161014/10000005316014/10000247569014/",
+   "transcription": null,
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 27.3,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟩",
+    "score": 0.96,
+    "accuracy": {
+     "char_accuracy": 0.93,
+     "basis": "1680 год: 93 % верных знаков на 101 размеченной вручную строке"
+    },
+    "text": "text/rgada-214-5-221.md",
+    "data": "data/readings/rgada-214-5-221.json"
+   },
+   "card": "cases/rgada-214-5-221.md",
+   "regions": [
+    "Свердловская область"
+   ],
+   "uezd": [
+    "Верхотурский"
+   ],
+   "year_from": 1676,
+   "year_to": 1677,
+   "kind": "денежный сбор",
+   "census": null,
+   "estates": [],
+   "places": [],
+   "guides": [],
+   "note": null
+  },
+  {
+   "id": "rgada-350-1-38",
+   "archive": "РГАДА",
+   "fond": "350",
+   "inventory": "1",
+   "unit": "38",
+   "title": "1. Книга переписная новопоселенных церковнослужителей и помещичьих крестьян Верхнеломовского уезда (лл. 2-123). 2. Книга переписная новопоселенных станичников Борисоглебского уезда (лл. 124-173). 3. Сказки «лучших людей» о новопоселенных станичниках Борисоглебского уезда (лл. 174-200). 4. Сказки и распросные речи новопоселенных помещичьих крестьян (кн. А.Д. Меншикова) русских и Черкасс, монастырских крестьян (Солотчинский м-рь) детей боярских, церковнослужителей Тамбовского уезда (лл. 201-371, 380-492, 496-546, 700, 757). 5. Сказки и распросные речи новопоселенных помещичьих крестьян, церковнослужителей, детей боярских, однодворцев Шацкого уезда (лл. 552-699, 716-1017). 6. Сказки и распросные речи новопоселенных помещичьих крестьян Керенского уезда (лл. 1018-1058). 7. Дела канцелярии стольника Ф.А. Татищева о проведении переписи и сыску беглых (лл. 372-379, 495-495, 548-551, 700-717). Содержатся списки выписей из переписных книг, поступных записей и других крепостных актов.",
+   "years": "1714",
+   "state": "частично набрана",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": 1057,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000000297014/10000005244014/10000001927014/",
+   "transcription": {
+    "title": "census1710.narod.ru",
+    "url": "http://census1710.narod.ru/perepis/350_1_38.htm"
+   },
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 39.4,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟩",
+    "score": 1.0,
+    "accuracy": {
+     "char_accuracy": 0.9,
+     "basis": "1718–1720-е: 90 % верных знаков на размеченных вручную строках четырёх книг, которых модель при обучении не видела"
+    },
+    "text": "text/rgada-350-1-38.md",
+    "data": "data/readings/rgada-350-1-38.json"
+   },
+   "card": "cases/rgada-350-1-38.md",
+   "regions": [
+    "Пензенская область",
+    "Воронежская область"
+   ],
+   "uezd": [
+    "Верхнеломовский",
+    "Борисоглебский"
+   ],
+   "year_from": 1714,
+   "year_to": 1714,
+   "kind": "переписная",
+   "census": null,
+   "estates": [
+    "церковнослужители",
+    "помещичьи"
+   ],
+   "places": [],
+   "guides": [],
+   "note": "Сборник переписных книг новопоселенных; набрана часть — вотчины А. Л. и И. Л. Нарышкиных."
+  },
+  {
+   "id": "rgada-350-1-478",
+   "archive": "РГАДА",
+   "fond": "350",
+   "inventory": "1",
+   "unit": "478",
+   "title": "Книга переписная подъячих, приставов, посадских людей и их работников (встречается «самоедской» породы), бобылей г. Яренска, монахов, монастырских вкладчиков, монастырских работных людей, посадских людей / государственных черносошных/ крестьян и их работников и крепостных «мунгарской» породы, посадских, купеческих, крестьянских, монастырских церковных половников, бобылей Яренского уезда. Перечневые выписки итогов переписи (лл. 291об.- 292).",
+   "years": "1710-е",
+   "state": "набрана",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": 235,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000000297014/10000005244014/10000002391014/",
+   "transcription": {
+    "title": "census1710.narod.ru",
+    "url": "http://census1710.narod.ru/perepis/350_1_478.htm"
+   },
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 33.1,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟩",
+    "score": 1.0,
+    "accuracy": {
+     "char_accuracy": 0.9,
+     "basis": "1718–1720-е: 90 % верных знаков на размеченных вручную строках четырёх книг, которых модель при обучении не видела"
+    },
+    "text": "text/rgada-350-1-478.md",
+    "data": "data/readings/rgada-350-1-478.json"
+   },
+   "card": "cases/rgada-350-1-478.md",
+   "regions": [
+    "Архангельская область"
+   ],
+   "uezd": [
+    "Яренский"
+   ],
+   "year_from": 1710,
+   "year_to": 1719,
+   "kind": "переписная",
+   "census": null,
+   "estates": [
+    "все"
+   ],
+   "places": [
+    {
+     "name": "Яренск",
+     "kind": "город",
+     "uezd": "Яренский"
+    }
+   ],
+   "guides": [],
+   "note": null
+  },
+  {
+   "id": "rgada-350-2-3579",
+   "archive": "РГАДА",
+   "fond": "350",
+   "inventory": "2",
+   "unit": "3579",
+   "title": "Книга переписная посадских людей, цеховых, разночинцев, дворовых людей, ссыльных г. Томска, посадских людей, разночинцев (в т.ч. монастырских), пашенных монастырских крестьян Томского уезда., крестьян Сосновского и Чаусского острогов Томского уезда., приписанных к Барнаульскому заводу А.Н. Демидова.",
+   "years": "1748",
+   "state": "частично набрана",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": 770,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000000297014/10000003364014/10000006079014/",
+   "transcription": {
+    "title": "ВГД, дневник Falleg-heimur",
+    "url": "https://forum.vgd.ru/6043/"
+   },
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 17.7,
+    "mean_confidence": null,
+    "tabular": true,
+    "grade": "🟨",
+    "score": 1.0,
+    "accuracy": {
+     "char_accuracy": 0.61,
+     "basis": "1740-е: 61 % верных знаков на размеченных вручную строках трёх книг 1748 года, которых модель при обучении не видела, — от 49 до 70 % в зависимости от писца"
+    },
+    "text": "text/rgada-350-2-3579.md",
+    "data": "data/readings/rgada-350-2-3579.json"
+   },
+   "card": "cases/rgada-350-2-3579.md",
+   "regions": [
+    "Томская область"
+   ],
+   "uezd": [
+    "Томский"
+   ],
+   "year_from": 1748,
+   "year_to": 1748,
+   "kind": "ревизская",
+   "census": {
+    "key": "rev2",
+    "title": "II ревизия, 1744–1748"
+   },
+   "estates": [
+    "все"
+   ],
+   "places": [
+    {
+     "name": "Томск",
+     "kind": "город",
+     "uezd": "Томский"
+    }
+   ],
+   "guides": [],
+   "note": "Набор на ВГД — выписка: без номеров душ и без формул, метки мимо строк. Годится как указатель, не как текст."
+  },
+  {
+   "id": "rgada-350-2-404",
+   "archive": "РГАДА",
+   "fond": "350",
+   "inventory": "2",
+   "unit": "404",
+   "title": "Сказки о помещичьих крестьянах и сказки однодворцев рейтарской, городовой, солдатской и др. служб Наугорского, Однолуцкого, Годыревского станов Болховского уезда. Алфавит XIX в.",
+   "years": "1719",
+   "state": "только машинное чтение",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": 330,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000000297014/10000003363014/10000002840014/",
+   "transcription": null,
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 39.9,
+    "mean_confidence": null,
+    "tabular": false,
+    "grade": "🟩",
+    "score": 1.0,
+    "accuracy": {
+     "char_accuracy": 0.9,
+     "basis": "1718–1720-е: 90 % верных знаков на размеченных вручную строках четырёх книг, которых модель при обучении не видела"
+    },
+    "text": "text/rgada-350-2-404.md",
+    "data": "data/readings/rgada-350-2-404.json"
+   },
+   "card": "cases/rgada-350-2-404.md",
+   "regions": [
+    "Орловская область"
+   ],
+   "uezd": [
+    "Болховский"
+   ],
+   "year_from": 1719,
+   "year_to": 1719,
+   "kind": "ревизская",
+   "census": {
+    "key": "rev1",
+    "title": "I ревизия, 1719–1727"
+   },
+   "estates": [
+    "помещичьи",
+    "однодворцы"
+   ],
+   "places": [
+    {
+     "name": "Наугорский",
+     "kind": "стан",
+     "uezd": "Болховский"
+    },
+    {
+     "name": "Однолуцкий",
+     "kind": "стан",
+     "uezd": "Болховский"
+    },
+    {
+     "name": "Годыревский",
+     "kind": "стан",
+     "uezd": "Болховский"
+    }
+   ],
+   "guides": [],
+   "note": "Год на карточке не выставлен; по составу — сказки первой ревизии."
+  },
+  {
+   "id": "rgada-350-2-406",
+   "archive": "РГАДА",
+   "fond": "350",
+   "inventory": "2",
+   "unit": "406",
+   "title": "Книга переписная рейтар, солдат, казаков, драгун и др. служилых однодворцев г. Болхова и Болховского уезда. Алфавит именной с указанием итогов переписи (лл. 1-28).",
+   "years": "после 1723",
+   "state": "только машинное чтение",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": 346,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000000297014/10000003363014/10000002842014/",
+   "transcription": null,
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 16.0,
+    "mean_confidence": null,
+    "tabular": true,
+    "grade": "🟨",
+    "score": 1.0,
+    "accuracy": {
+     "char_accuracy": null,
+     "basis": "1718–1720-е: 90 % верных знаков на размеченных вручную строках четырёх книг, которых модель при обучении не видела. Книга табличная, а мерка снята со сплошного текста: табличные книги этого времени не мерены и читаются хуже"
+    },
+    "text": "text/rgada-350-2-406.md",
+    "data": "data/readings/rgada-350-2-406.json"
+   },
+   "card": "cases/rgada-350-2-406.md",
+   "regions": [
+    "Орловская область"
+   ],
+   "uezd": [
+    "Болховский"
+   ],
+   "year_from": 1723,
+   "year_to": 1727,
+   "kind": "ревизская",
+   "census": {
+    "key": "rev1",
+    "title": "I ревизия, 1719–1727"
+   },
+   "estates": [
+    "однодворцы",
+    "служилые"
+   ],
+   "places": [
+    {
+     "name": "Болхов",
+     "kind": "город",
+     "uezd": "Болховский"
+    }
+   ],
+   "guides": [],
+   "note": "Именной алфавит с итогами — лл.1-28."
+  },
+  {
+   "id": "rgada-350-2-407",
+   "archive": "РГАДА",
+   "fond": "350",
+   "inventory": "2",
+   "unit": "407",
+   "title": "Книга переписная окладная помещичьих, монастырских крестьян, однодворцев – служилых людей (солдат, стрельцов, пушкарей, рейтар, драгун), церковнослужителей Болховского уезда.",
+   "years": "1720-е",
+   "state": "только машинное чтение",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": 823,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000000297014/10000003363014/10000002843014/",
+   "transcription": null,
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 12.8,
+    "mean_confidence": null,
+    "tabular": true,
+    "grade": "🟨",
+    "score": 1.0,
+    "accuracy": {
+     "char_accuracy": null,
+     "basis": "1718–1720-е: 90 % верных знаков на размеченных вручную строках четырёх книг, которых модель при обучении не видела. Книга табличная, а мерка снята со сплошного текста: табличные книги этого времени не мерены и читаются хуже"
+    },
+    "text": "text/rgada-350-2-407.md",
+    "data": "data/readings/rgada-350-2-407.json"
+   },
+   "card": "cases/rgada-350-2-407.md",
+   "regions": [
+    "Орловская область"
+   ],
+   "uezd": [
+    "Болховский"
+   ],
+   "year_from": 1720,
+   "year_to": 1729,
+   "kind": "ревизская",
+   "census": {
+    "key": "rev1",
+    "title": "I ревизия, 1719–1727"
+   },
+   "estates": [
+    "помещичьи",
+    "монастырские",
+    "однодворцы",
+    "церковнослужители"
+   ],
+   "places": [],
+   "guides": [],
+   "note": "Окладная книга; год на карточке не выставлен."
+  },
+  {
+   "id": "rgada-350-2-408",
+   "archive": "РГАДА",
+   "fond": "350",
+   "inventory": "2",
+   "unit": "408",
+   "title": "Сказки о купцах и посадских людях г. Болхова, однодворцах и помещичьих крестьянах Годыревского стана Болховского уезда. Алфавит именной (лл. 1-39). Опись поправок (лл. 40-44).",
+   "years": "1762-1764",
+   "state": "только машинное чтение",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": 700,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000000297014/10000003363014/10000002844014/",
+   "transcription": null,
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 22.5,
+    "mean_confidence": null,
+    "tabular": true,
+    "grade": "🟨",
+    "score": 1.0,
+    "accuracy": {
+     "char_accuracy": 0.61,
+     "basis": "1740-е: 61 % верных знаков на размеченных вручную строках трёх книг 1748 года, которых модель при обучении не видела, — от 49 до 70 % в зависимости от писца"
+    },
+    "text": "text/rgada-350-2-408.md",
+    "data": "data/readings/rgada-350-2-408.json"
+   },
+   "card": "cases/rgada-350-2-408.md",
+   "regions": [
+    "Орловская область"
+   ],
+   "uezd": [
+    "Болховский"
+   ],
+   "year_from": 1762,
+   "year_to": 1764,
+   "kind": "ревизская",
+   "census": {
+    "key": "rev3",
+    "title": "III ревизия, 1762–1766"
+   },
+   "estates": [
+    "посадские",
+    "однодворцы",
+    "помещичьи"
+   ],
+   "places": [
+    {
+     "name": "Болхов",
+     "kind": "город",
+     "uezd": "Болховский"
+    },
+    {
+     "name": "Годыревский",
+     "kind": "стан",
+     "uezd": "Болховский"
+    }
+   ],
+   "guides": [],
+   "note": "Именной алфавит — лл.1-39."
+  },
+  {
+   "id": "rgada-350-2-471",
+   "archive": "РГАДА",
+   "fond": "350",
+   "inventory": "2",
+   "unit": "471",
+   "title": "Книга переписная дворцовых крестьян Благовещенского прихода Пониволоцкой, Судромской, Ракульской, Шабановской, Хмельницкой, Верхоподюжской, Тавренской, Олешинской, Морозовской, Липецкой, Шелацкой, Двинской, Жаровской, Доровской, Жиховской волостей, Воскресенского прихода, Пакшенской, Пежемской, Кьянской, Устьевской, Кулунской, Ракульской, Погосской, Терменской, Верховской, Низовской десятин и Сидоровой слободки Важского уезда.",
+   "years": "1747",
+   "state": "частично набрана",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": 753,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000000297014/10000003363014/10000002907014/",
+   "transcription": {
+    "title": "1670.ru",
+    "url": "https://1670.ru/census/1747/verkhovazhskaya-chet/tavrengskaya-volost/"
+   },
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 14.3,
+    "mean_confidence": null,
+    "tabular": true,
+    "grade": "🟨",
+    "score": 1.0,
+    "accuracy": {
+     "char_accuracy": 0.61,
+     "basis": "1740-е: 61 % верных знаков на размеченных вручную строках трёх книг 1748 года, которых модель при обучении не видела, — от 49 до 70 % в зависимости от писца"
+    },
+    "text": "text/rgada-350-2-471.md",
+    "data": "data/readings/rgada-350-2-471.json"
+   },
+   "card": "cases/rgada-350-2-471.md",
+   "regions": [
+    "Архангельская область",
+    "Вологодская область"
+   ],
+   "uezd": [
+    "Важский"
+   ],
+   "year_from": 1747,
+   "year_to": 1747,
+   "kind": "ревизская",
+   "census": {
+    "key": "rev2",
+    "title": "II ревизия, 1744–1748"
+   },
+   "estates": [
+    "дворцовые"
+   ],
+   "places": [
+    {
+     "name": "Тавренская",
+     "kind": "волость",
+     "uezd": "Важский"
+    },
+    {
+     "name": "Морозовская",
+     "kind": "волость",
+     "uezd": "Важский"
+    },
+    {
+     "name": "Пежемская",
+     "kind": "волость",
+     "uezd": "Важский"
+    }
+   ],
+   "guides": [],
+   "note": "Верховажская четь. Набрана Тавренская волость, с номерами душ."
+  },
+  {
+   "id": "rgada-350-2-583",
+   "archive": "РГАДА",
+   "fond": "350",
+   "inventory": "2",
+   "unit": "583",
+   "title": "Книга переписная государственных и монастырских крестьян Верхотурского уезда. Ведомость итогов переписи (л. 208).",
+   "years": "1747",
+   "state": "только машинное чтение",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": 143,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000000297014/10000003363014/10000003022014/",
+   "transcription": null,
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 19.6,
+    "mean_confidence": null,
+    "tabular": true,
+    "grade": "🟨",
+    "score": 1.0,
+    "accuracy": {
+     "char_accuracy": 0.61,
+     "basis": "1740-е: 61 % верных знаков на размеченных вручную строках трёх книг 1748 года, которых модель при обучении не видела, — от 49 до 70 % в зависимости от писца"
+    },
+    "text": "text/rgada-350-2-583.md",
+    "data": "data/readings/rgada-350-2-583.json"
+   },
+   "card": "cases/rgada-350-2-583.md",
+   "regions": [
+    "Свердловская область"
+   ],
+   "uezd": [
+    "Верхотурский"
+   ],
+   "year_from": 1747,
+   "year_to": 1747,
+   "kind": "ревизская",
+   "census": {
+    "key": "rev2",
+    "title": "II ревизия, 1744–1748"
+   },
+   "estates": [
+    "государственные крестьяне",
+    "монастырские"
+   ],
+   "places": [
+    {
+     "name": "Погорельская",
+     "kind": "слобода",
+     "uezd": "Верхотурский"
+    },
+    {
+     "name": "Невьянская",
+     "kind": "слобода",
+     "leaves": "обр.70 (л.132) и далее",
+     "uezd": "Верхотурский"
+    }
+   ],
+   "guides": [],
+   "note": "Листы 62-209. Тагильской слободы в книге нет."
+  },
+  {
+   "id": "rgada-350-2-584",
+   "archive": "РГАДА",
+   "fond": "350",
+   "inventory": "2",
+   "unit": "584",
+   "title": "Книга переписная мастеровых, работных людей и крестьян, приписанных к Невьянскому, Бинговскому, Нижнетагильскому, Выйскому, Лайскому, Черноисточенскому, Висимошайтанскому, Шайтанскому, Уткинскому, Ревдинскому, Верхнетагильскому, Шуралинскому железоделательным заводам А. Демидова Верхотурского уезда. Алфавит географический (лл. 1-5). Ведомости итогов переписи (л. 702).",
+   "years": "1747",
+   "state": "частично набрана",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": 713,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000000297014/10000003363014/10000003023014/",
+   "transcription": {
+    "title": "1670.ru",
+    "url": "https://1670.ru/census/1747/"
+   },
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 20.5,
+    "mean_confidence": null,
+    "tabular": true,
+    "grade": "🟨",
+    "score": 1.0,
+    "accuracy": {
+     "char_accuracy": 0.61,
+     "basis": "1740-е: 61 % верных знаков на размеченных вручную строках трёх книг 1748 года, которых модель при обучении не видела, — от 49 до 70 % в зависимости от писца"
+    },
+    "text": "text/rgada-350-2-584.md",
+    "data": "data/readings/rgada-350-2-584.json"
+   },
+   "card": "cases/rgada-350-2-584.md",
+   "regions": [
+    "Свердловская область"
+   ],
+   "uezd": [
+    "Верхотурский"
+   ],
+   "year_from": 1747,
+   "year_to": 1747,
+   "kind": "ревизская",
+   "census": {
+    "key": "rev2",
+    "title": "II ревизия, 1744–1748"
+   },
+   "estates": [
+    "приписные к заводам"
+   ],
+   "places": [
+    {
+     "name": "Краснопольская",
+     "kind": "слобода",
+     "uezd": "Верхотурский"
+    }
+   ],
+   "guides": [],
+   "note": "Демидовские заводы; набраны Невьянск, Нижний и Верхний Тагил, Ревда, Быньги, Шурала, Краснопольская слобода."
+  },
+  {
+   "id": "rgada-350-2-585",
+   "archive": "РГАДА",
+   "fond": "350",
+   "inventory": "2",
+   "unit": "585",
+   "title": "Книга переписная выбывших после 1 ревизии посадских людей, разночинцев, государственных, монастырских крестьян и дворовых людей, выключенных из подушного оклада и переведенных в ясачные новокрещенных вогулов (манси), государственных крестьян, приписанных к казенным и частным заводам Верхотурского уезда.",
+   "years": "1747",
+   "state": "только машинное чтение",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": 108,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000000297014/10000003363014/10000003024014/",
+   "transcription": null,
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 19.9,
+    "mean_confidence": null,
+    "tabular": true,
+    "grade": "🟨",
+    "score": 1.0,
+    "accuracy": {
+     "char_accuracy": 0.61,
+     "basis": "1740-е: 61 % верных знаков на размеченных вручную строках трёх книг 1748 года, которых модель при обучении не видела, — от 49 до 70 % в зависимости от писца"
+    },
+    "text": "text/rgada-350-2-585.md",
+    "data": "data/readings/rgada-350-2-585.json"
+   },
+   "card": "cases/rgada-350-2-585.md",
+   "regions": [
+    "Свердловская область"
+   ],
+   "uezd": [
+    "Верхотурский"
+   ],
+   "year_from": 1747,
+   "year_to": 1747,
+   "kind": "ревизская",
+   "census": {
+    "key": "rev2",
+    "title": "II ревизия, 1744–1748"
+   },
+   "estates": [
+    "все"
+   ],
+   "places": [
+    {
+     "name": "Тагильская",
+     "kind": "слобода",
+     "leaves": "обр.53 (л.50) и далее",
+     "uezd": "Верхотурский"
+    }
+   ],
+   "guides": [],
+   "note": "Выбывшие после I ревизии."
+  },
+  {
+   "id": "rgada-350-2-586",
+   "archive": "РГАДА",
+   "fond": "350",
+   "inventory": "2",
+   "unit": "586",
+   "title": "Сказки о мастеровых, работных людях, крепостных крестьянах Ревдинского, Уткинского, Биссертского заводов Демидовых, государственных крестьян Аятской, Краснопольской слобод, приписанных к заводам Демидовых Верхотурского уезда. Ведомости именные об убылых после II ревизии и итогов переписи: Ревдинского завода (лл. 138-145), Уткинского завода (лл. 238-245), Биссертского завода (л. 246), Аятской слободы (лл. 396-412), Краснопольской слободы (лл. 510-524). Ведомость итогов переписи по заводам и категориям населения (лл. 525-526). Указатель сказок и ведомостей (лл. 527-528). Опись поправок (лл. 529-533).",
+   "years": "1763",
+   "state": "частично набрана",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": 533,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000000297014/10000003363014/10000003025014/",
+   "transcription": {
+    "title": "1670.ru",
+    "url": "https://1670.ru/census/1763/ayatskaya-sloboda/"
+   },
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 21.3,
+    "mean_confidence": null,
+    "tabular": true,
+    "grade": "🟨",
+    "score": 1.0,
+    "accuracy": {
+     "char_accuracy": 0.61,
+     "basis": "1740-е: 61 % верных знаков на размеченных вручную строках трёх книг 1748 года, которых модель при обучении не видела, — от 49 до 70 % в зависимости от писца"
+    },
+    "text": "text/rgada-350-2-586.md",
+    "data": "data/readings/rgada-350-2-586.json"
+   },
+   "card": "cases/rgada-350-2-586.md",
+   "regions": [
+    "Свердловская область"
+   ],
+   "uezd": [
+    "Верхотурский"
+   ],
+   "year_from": 1763,
+   "year_to": 1763,
+   "kind": "ревизская",
+   "census": {
+    "key": "rev3",
+    "title": "III ревизия, 1762–1766"
+   },
+   "estates": [
+    "приписные к заводам",
+    "государственные крестьяне"
+   ],
+   "places": [
+    {
+     "name": "Аятская",
+     "kind": "слобода",
+     "uezd": "Верхотурский"
+    },
+    {
+     "name": "Краснопольская",
+     "kind": "слобода",
+     "uezd": "Верхотурский"
+    }
+   ],
+   "guides": [],
+   "note": "Набраны Аятская и Краснопольская слободы и Бисерть."
+  },
+  {
+   "id": "rgada-350-2-587",
+   "archive": "РГАДА",
+   "fond": "350",
+   "inventory": "2",
+   "unit": "587",
+   "title": "Сказки о мастеровых, работных людях и приписных крестьянах Янского, Бинговского, Шайтанского, Верхнетагильского, Верхненевьянского, Шуралинского железоделательных заводов П. А. Демидова Верхотурского уезда. Ведомость итогов переписи (лл. 633-638). Сказка об убылых и прибылых после II ревизии (лл. 639-648). Опись поправок (лл. 649-658). Указатель сказок (л. 1).",
+   "years": "1763",
+   "state": "частично набрана",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": 658,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000000297014/10000003363014/10000003026014/",
+   "transcription": {
+    "title": "1670.ru",
+    "url": "https://1670.ru/census/1763/nevyansk/"
+   },
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 21.3,
+    "mean_confidence": null,
+    "tabular": true,
+    "grade": "🟨",
+    "score": 1.0,
+    "accuracy": {
+     "char_accuracy": 0.61,
+     "basis": "1740-е: 61 % верных знаков на размеченных вручную строках трёх книг 1748 года, которых модель при обучении не видела, — от 49 до 70 % в зависимости от писца"
+    },
+    "text": "text/rgada-350-2-587.md",
+    "data": "data/readings/rgada-350-2-587.json"
+   },
+   "card": "cases/rgada-350-2-587.md",
+   "regions": [
+    "Свердловская область"
+   ],
+   "uezd": [
+    "Верхотурский"
+   ],
+   "year_from": 1763,
+   "year_to": 1763,
+   "kind": "ревизская",
+   "census": {
+    "key": "rev3",
+    "title": "III ревизия, 1762–1766"
+   },
+   "estates": [
+    "приписные к заводам"
+   ],
+   "places": [],
+   "guides": [],
+   "note": "Набрана Невьянская часть."
+  },
+  {
+   "id": "rgada-350-2-902",
+   "archive": "РГАДА",
+   "fond": "350",
+   "inventory": "2",
+   "unit": "902",
+   "title": "Сказки о посадских людях, купцах, цеховых, раскольниках г. Екатеринбурга. Перечневые выписки итогов переписи (лл. 47-49).",
+   "years": "1762-1764",
+   "state": "набрана",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": 50,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000000297014/10000003363014/10000003344014/",
+   "transcription": {
+    "title": "Ю. В. Коновалов",
+    "url": "https://dzen.ru/id/67a7640d5ffb060a06bd0e60"
+   },
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 20.9,
+    "mean_confidence": null,
+    "tabular": true,
+    "grade": "🟨",
+    "score": 1.0,
+    "accuracy": {
+     "char_accuracy": 0.61,
+     "basis": "1740-е: 61 % верных знаков на размеченных вручную строках трёх книг 1748 года, которых модель при обучении не видела, — от 49 до 70 % в зависимости от писца"
+    },
+    "text": "text/rgada-350-2-902.md",
+    "data": "data/readings/rgada-350-2-902.json"
+   },
+   "card": "cases/rgada-350-2-902.md",
+   "regions": [
+    "Свердловская область"
+   ],
+   "uezd": [
+    "Екатеринбургский"
+   ],
+   "year_from": 1762,
+   "year_to": 1764,
+   "kind": "ревизская",
+   "census": {
+    "key": "rev3",
+    "title": "III ревизия, 1762–1766"
+   },
+   "estates": [
+    "посадские"
+   ],
+   "places": [
+    {
+     "name": "Екатеринбург",
+     "kind": "город",
+     "uezd": "Екатеринбургский"
+    }
+   ],
+   "guides": [],
+   "note": null
+  },
+  {
+   "id": "rgada-350-2-903",
+   "archive": "РГАДА",
+   "fond": "350",
+   "inventory": "2",
+   "unit": "903",
+   "title": "Сказки о канцелярских служителях, дворовых людях, мастерах, подмастерьях, школьных надзирателях и других служителях Канцелярии Главного правления Сибирских и Казанских заводов и других учреждений г. Екатеринбурга, военнослужащих, ссыльных каторжных, приказных служителях, мастеровых и работных людях заводских контор, Чусовской казенной пристани и Гороблагодатских заводов г. Екатеринбурга.",
+   "years": "1762-1764",
+   "state": "набрана",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": 379,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000000297014/10000003363014/10000003345014/",
+   "transcription": {
+    "title": "Ю. В. Коновалов",
+    "url": "https://dzen.ru/id/67a7640d5ffb060a06bd0e60"
+   },
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 20.4,
+    "mean_confidence": null,
+    "tabular": true,
+    "grade": "🟨",
+    "score": 1.0,
+    "accuracy": {
+     "char_accuracy": 0.61,
+     "basis": "1740-е: 61 % верных знаков на размеченных вручную строках трёх книг 1748 года, которых модель при обучении не видела, — от 49 до 70 % в зависимости от писца"
+    },
+    "text": "text/rgada-350-2-903.md",
+    "data": "data/readings/rgada-350-2-903.json"
+   },
+   "card": "cases/rgada-350-2-903.md",
+   "regions": [
+    "Свердловская область"
+   ],
+   "uezd": [
+    "Екатеринбургский"
+   ],
+   "year_from": 1762,
+   "year_to": 1764,
+   "kind": "ревизская",
+   "census": {
+    "key": "rev3",
+    "title": "III ревизия, 1762–1766"
+   },
+   "estates": [
+    "служилые"
+   ],
+   "places": [
+    {
+     "name": "Екатеринбург",
+     "kind": "город",
+     "uezd": "Екатеринбургский"
+    }
+   ],
+   "guides": [],
+   "note": null
+  },
+  {
+   "id": "rgada-350-2-904",
+   "archive": "РГАДА",
+   "fond": "350",
+   "inventory": "2",
+   "unit": "904",
+   "title": "Сказки о приказных служителях, мастеровых и работных людях Екатеринбургской монетной экспедиции, государственных черносошных крестьянах Катайского острога Екатеринбургского ведомства.",
+   "years": "1762-1764",
+   "state": "набрана",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": 446,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000000297014/10000003363014/10000003346014/",
+   "transcription": {
+    "title": "Ю. В. Коновалов",
+    "url": "https://dzen.ru/id/67a7640d5ffb060a06bd0e60"
+   },
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 20.9,
+    "mean_confidence": null,
+    "tabular": true,
+    "grade": "🟨",
+    "score": 1.0,
+    "accuracy": {
+     "char_accuracy": 0.61,
+     "basis": "1740-е: 61 % верных знаков на размеченных вручную строках трёх книг 1748 года, которых модель при обучении не видела, — от 49 до 70 % в зависимости от писца"
+    },
+    "text": "text/rgada-350-2-904.md",
+    "data": "data/readings/rgada-350-2-904.json"
+   },
+   "card": "cases/rgada-350-2-904.md",
+   "regions": [
+    "Свердловская область"
+   ],
+   "uezd": [
+    "Екатеринбургский"
+   ],
+   "year_from": 1762,
+   "year_to": 1764,
+   "kind": "ревизская",
+   "census": {
+    "key": "rev3",
+    "title": "III ревизия, 1762–1766"
+   },
+   "estates": [
+    "государственные крестьяне"
+   ],
+   "places": [
+    {
+     "name": "Катайский",
+     "kind": "острог",
+     "uezd": "Екатеринбургский"
+    }
+   ],
+   "guides": [],
+   "note": null
+  },
+  {
+   "id": "rgada-350-2-908",
+   "archive": "РГАДА",
+   "fond": "350",
+   "inventory": "2",
+   "unit": "908",
+   "title": "Сказки о государственных черносошных крестьянах Екатеринбургского ведомства, приписанных к Верх-Исетскому заводу Р. И. Воронцова; государственных черносошных крестьянах Белоярской, Пышминской слобод Екатеринбургского ведомства.",
+   "years": "1762-1764",
+   "state": "набрана",
+   "scans": "ГИС УИАД, оцифровано",
+   "leaves": 695,
+   "images": null,
+   "case_url": "https://online.archives.ru/guide/10000000001014/10000000297014/10000003363014/10000003350014/",
+   "transcription": {
+    "title": "Ю. В. Коновалов",
+    "url": "https://dzen.ru/id/67a7640d5ffb060a06bd0e60"
+   },
+   "machine_reading": {
+    "model": "скоропись-12 v8",
+    "model_url": "https://doi.org/10.5281/zenodo.22933888",
+    "chars_per_line": 19.6,
+    "mean_confidence": null,
+    "tabular": true,
+    "grade": "🟨",
+    "score": 1.0,
+    "accuracy": {
+     "char_accuracy": 0.61,
+     "basis": "1740-е: 61 % верных знаков на размеченных вручную строках трёх книг 1748 года, которых модель при обучении не видела, — от 49 до 70 % в зависимости от писца"
+    },
+    "text": "text/rgada-350-2-908.md",
+    "data": "data/readings/rgada-350-2-908.json"
+   },
+   "card": "cases/rgada-350-2-908.md",
+   "regions": [
+    "Свердловская область"
+   ],
+   "uezd": [
+    "Екатеринбургский"
+   ],
+   "year_from": 1762,
+   "year_to": 1764,
+   "kind": "ревизская",
+   "census": {
+    "key": "rev3",
+    "title": "III ревизия, 1762–1766"
+   },
+   "estates": [
+    "государственные крестьяне",
+    "приписные к заводам"
+   ],
+   "places": [
+    {
+     "name": "Белоярская",
+     "kind": "слобода",
+     "uezd": "Екатеринбургский"
+    },
+    {
+     "name": "Пышминская",
+     "kind": "слобода",
+     "uezd": "Екатеринбургский"
+    }
+   ],
+   "guides": [],
+   "note": null
   }
  ]
 }

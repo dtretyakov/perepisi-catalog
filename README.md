@@ -1,8 +1,8 @@
 # Переписи и ревизии XVII–XVIII веков: что уже набрано, а что нет
 
 Справочник для тех, кто ищет предков в писцовых, переписных и ревизских книгах
-XVII–XVIII веков. Сейчас в нём уезды Урала и Прикамья, Русского Севера и Пинеги,
-Вятки, Орловской и Курской земель, Западной Сибири, а по Верхотурскому уезду — и ревизии
+XVII–XVIII веков. Сейчас в нём уезды Урала и Прикамья, Русского Севера, Пинеги и Вологодчины,
+Вятки, Орловской и Курской земель, Западной Сибири и Томска, а по Верхотурскому уезду — и ревизии
 XIX века; список растёт по мере того, как дела читаются.
 
 Справочник отвечает на один вопрос, выяснение которого обычно занимает день работы, а нередко требует и расходов:
@@ -18,16 +18,22 @@ XIX века; список растёт по мере того, как дела 
 шла раньше и какая позже, кто в ней записан и можно ли её прочесть.
 
 <!-- regions -->
-- **[Свердловская область](regions/sverdlovskaya.md)**: [Верхотурский](regions/sverdlovskaya.md#u-verkhoturskiy) — 29 дел, [Пелымский](regions/sverdlovskaya.md#u-pelymskiy) — 1 дело
-- **[Архангельская область](regions/arkhangelskaya.md)**: [Кеврольский](regions/arkhangelskaya.md#u-kevrolskiy) — 14 дел, [Мезенский](regions/arkhangelskaya.md#u-mezenskiy) — 8 дел, [Двинской](regions/arkhangelskaya.md#u-dvinskoy) — 5 дел, [Важский](regions/arkhangelskaya.md#u-vazhskiy) — 1 дело
-- **[Орловская область](regions/orlovskaya.md)**: [Кромский](regions/orlovskaya.md#u-kromskiy) — 10 дел
-- **[Пермский край](regions/permskiy-kray.md)**: [Чердынский](regions/permskiy-kray.md#u-cherdynskiy) — 1 дело, [Соликамский](regions/permskiy-kray.md#u-solikamskiy) — 1 дело
-- **[Кировская область](regions/kirovskaya.md)**: [Вятский](regions/kirovskaya.md#u-vyatskiy) — 2 дела
-- **[Тюменская область](regions/tyumenskaya.md)**: [Тобольский](regions/tyumenskaya.md#u-tobolskiy) — 1 дело
-- **[Курганская область](regions/kurganskaya.md)**: [Тобольский](regions/kurganskaya.md#u-tobolskiy) — 1 дело
+- **[Свердловская область](regions/sverdlovskaya.md)**: [Верхотурский](regions/sverdlovskaya.md#u-verkhoturskiy) — 46 дел, [Пелымский](regions/sverdlovskaya.md#u-pelymskiy) — 1 дело, [Екатеринбургский](regions/sverdlovskaya.md#u-ekaterinburgskiy) — 4 дела
+- **[Архангельская область](regions/arkhangelskaya.md)**: [Кеврольский](regions/arkhangelskaya.md#u-kevrolskiy) — 14 дел, [Мезенский](regions/arkhangelskaya.md#u-mezenskiy) — 8 дел, [Двинской](regions/arkhangelskaya.md#u-dvinskoy) — 5 дел, [Важский](regions/arkhangelskaya.md#u-vazhskiy) — 2 дела, [Яренский](regions/arkhangelskaya.md#u-yarenskiy) — 1 дело
+- **[Орловская область](regions/orlovskaya.md)**: [Кромский](regions/orlovskaya.md#u-kromskiy) — 10 дел, [Болховский](regions/orlovskaya.md#u-bolkhovskiy) — 4 дела
+- **[Пермский край](regions/permskiy-kray.md)**: [Чердынский](regions/permskiy-kray.md#u-cherdynskiy) — 3 дела, [Соликамский](regions/permskiy-kray.md#u-solikamskiy) — 5 дел, [Казанский](regions/permskiy-kray.md#u-kazanskiy) — 1 дело
+- **[Кировская область](regions/kirovskaya.md)**: [Вятский](regions/kirovskaya.md#u-vyatskiy) — 3 дела, [Слободской](regions/kirovskaya.md#u-slobodskoy) — 1 дело
+- **[Тюменская область](regions/tyumenskaya.md)**: [Тобольский](regions/tyumenskaya.md#u-tobolskiy) — 11 дел
+- **[Курганская область](regions/kurganskaya.md)**: [Тобольский](regions/kurganskaya.md#u-tobolskiy) — 11 дел
 - **[Курская область](regions/kurskaya.md)**: [Курский](regions/kurskaya.md#u-kurskiy) — 1 дело, [Рыльский](regions/kurskaya.md#u-rylskiy) — 1 дело
 - **[Брянская область](regions/bryanskaya.md)**: [Карачевский](regions/bryanskaya.md#u-karachevskiy) — 1 дело
 - **[Мурманская область](regions/murmanskaya.md)**: [Кольский](regions/murmanskaya.md#u-kolskiy) — 1 дело
+- **[Вологодская область](regions/vologodskaya.md)**: [Важский](regions/vologodskaya.md#u-vazhskiy) — 2 дела, [Тотемский](regions/vologodskaya.md#u-totemskiy) — 1 дело
+- **[Республика Коми](regions/komi.md)**: [Кайгородский](regions/komi.md#u-kaygorodskiy) — 1 дело
+- **[Томская область](regions/tomskaya.md)**: [Томский](regions/tomskaya.md#u-tomskiy) — 1 дело
+- **[Пензенская область](regions/penzenskaya.md)**: [Верхнеломовский](regions/penzenskaya.md#u-verkhnelomovskiy) — 1 дело
+- **[Воронежская область](regions/voronezhskaya.md)**: [Борисоглебский](regions/voronezhskaya.md#u-borisoglebskiy) — 1 дело
+- **[Республика Татарстан](regions/tatarstan.md)**: [Казанский](regions/tatarstan.md#u-kazanskiy) — 1 дело
 <!-- /regions -->
 
 Другие входы:
@@ -68,7 +74,9 @@ XIX века; список растёт по мере того, как дела 
 На 1680 год это 93 %, на 1718–1720-е — 90 % на книгах, которых модель не видела,
 на 1740-е — 61 %, от 49 до 70 % в зависимости от писца. Для 1620–1650-х мерка есть
 только на книге, которую модель видела при обучении, и чужие руки того времени поэтому
-выше 🟨 не получают. Где размечено само дело, берётся его мерка.
+выше 🟨 не получают. Все мерки сняты со сплошного текста, поэтому табличная книга — имя,
+отчество и возраст в разных клетках — тоже не получает выше 🟨, пока её не померили отдельно.
+Где размечено само дело, берётся его мерка.
 
 **Берёт ли модель эту руку вообще** — плотность знаков на строку и уверенность модели.
 На своей руке плотность под тридцать, ниже двенадцати — чистый шум; на табличном деле,
@@ -108,8 +116,8 @@ XIX века; список растёт по мере того, как дела 
 образы из просмотрщика, и это единственный запрет, который здесь действительно
 действует. Подробно — в [rights.md](rights.md).
 
-**Чужих наборов.** Тексты Ю. В. Коновалова, census1710.narod.ru, zz-project.ru и
-«Родной Вятки» — многолетний труд конкретных людей. Здесь только ссылки на них.
+**Чужих наборов.** Тексты Ю. В. Коновалова, census1710.narod.ru, zz-project.ru, 1670.ru,
+наборы на ВГД и «Родной Вятки» — многолетний труд конкретных людей. Здесь только ссылки на них.
 За текстом следует обращаться к авторам.
 
 **Частных исследований.** Ни родословных, ни живых людей.
