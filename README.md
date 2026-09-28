@@ -12,9 +12,9 @@
 <!-- regions -->
 - **[Свердловская область](regions/sverdlovskaya.md)**: [Верхотурский](regions/sverdlovskaya.md#u-verkhoturskiy) — 46 дел, [Пелымский](regions/sverdlovskaya.md#u-pelymskiy) — 1 дело, [Екатеринбургский](regions/sverdlovskaya.md#u-ekaterinburgskiy) — 4 дела
 - **[Архангельская область](regions/arkhangelskaya.md)**: [Кеврольский](regions/arkhangelskaya.md#u-kevrolskiy) — 14 дел, [Мезенский](regions/arkhangelskaya.md#u-mezenskiy) — 8 дел, [Двинской](regions/arkhangelskaya.md#u-dvinskoy) — 5 дел, [Важский](regions/arkhangelskaya.md#u-vazhskiy) — 2 дела, [Яренский](regions/arkhangelskaya.md#u-yarenskiy) — 1 дело
-- **[Орловская область](regions/orlovskaya.md)**: [Кромский](regions/orlovskaya.md#u-kromskiy) — 10 дел, [Болховский](regions/orlovskaya.md#u-bolkhovskiy) — 4 дела
+- **[Орловская область](regions/orlovskaya.md)**: [Кромский](regions/orlovskaya.md#u-kromskiy) — 10 дел, [Болховский](regions/orlovskaya.md#u-bolkhovskiy) — 8 дел, [Орловский](regions/orlovskaya.md#u-orlovskiy) — 4 дела, [Ливенский](regions/orlovskaya.md#u-livenskiy) — 1 дело
 - **[Пермский край](regions/permskiy-kray.md)**: [Чердынский](regions/permskiy-kray.md#u-cherdynskiy) — 3 дела, [Соликамский](regions/permskiy-kray.md#u-solikamskiy) — 5 дел, [Казанский](regions/permskiy-kray.md#u-kazanskiy) — 1 дело
-- **[Кировская область](regions/kirovskaya.md)**: [Вятский](regions/kirovskaya.md#u-vyatskiy) — 3 дела, [Слободской](regions/kirovskaya.md#u-slobodskoy) — 1 дело
+- **[Кировская область](regions/kirovskaya.md)**: [Вятский](regions/kirovskaya.md#u-vyatskiy) — 6 дел, [Слободской](regions/kirovskaya.md#u-slobodskoy) — 1 дело
 - **[Тюменская область](regions/tyumenskaya.md)**: [Тобольский](regions/tyumenskaya.md#u-tobolskiy) — 11 дел
 - **[Курганская область](regions/kurganskaya.md)**: [Тобольский](regions/kurganskaya.md#u-tobolskiy) — 11 дел
 - **[Курская область](regions/kurskaya.md)**: [Курский](regions/kurskaya.md#u-kurskiy) — 1 дело, [Рыльский](regions/kurskaya.md#u-rylskiy) — 1 дело
