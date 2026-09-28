@@ -3343,7 +3343,8 @@
   "year_from": 1722,
   "year_to": 1722,
   "htr": "17.7",
-  "htr_model": "скоропись-12 v8"
+  "htr_model": "скоропись-12 v8",
+  "tabular": true
  },
  {
   "id": "rgada-1209-1-520",
